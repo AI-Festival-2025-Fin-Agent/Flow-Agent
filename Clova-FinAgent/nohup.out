@@ -1,0 +1,60 @@
+Traceback (most recent call last):
+  File "/home/sese/Clova-FinAgent/api_server.py", line 16, in <module>
+    from agents.stock_search_agent import StockSearchAgent
+  File "/home/sese/Clova-FinAgent/agents/stock_search_agent.py", line 17, in <module>
+    from langchain.tools import Tool
+ModuleNotFoundError: No module named 'langchain'
+/home/sese/Clova-FinAgent/api_server.py:67: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Will watch for changes in these directories: ['/home/sese/Clova-FinAgent']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1889918] using WatchFiles
+현재 작업 디렉토리: /home/sese/Clova-FinAgent
+프로젝트 루트: /home/sese/Clova-FinAgent
+✓ company_info.csv 존재
+✓ stock_info.db 존재
+✓ market_index.db 존재
+✓ technical_indicators.db 존재
+2025-10-14 03:41:06,752 - INFO - 1 change detected
+INFO:     Started server process [1889959]
+INFO:     Waiting for application startup.
+2025-10-14 03:41:06,752 - INFO - Stock Search Agent 초기화 중...
+2025-10-14 03:41:06,970 - INFO - Stock Search Agent 초기화 완료
+2025-10-14 03:41:06,971 - INFO - Stock Analyzer 초기화 중...
+2025-10-14 03:41:06,981 - INFO - Stock Analyzer 초기화 완료
+INFO:     Application startup complete.
+2025-10-14 03:41:07,102 - INFO - 3 changes detected
+2025-10-14 03:41:07,453 - INFO - 2 changes detected
+2025-10-14 03:41:07,803 - INFO - 3 changes detected
+2025-10-14 03:41:08,154 - INFO - 1 change detected
+2025-10-14 03:41:08,504 - INFO - 1 change detected
+2025-10-14 03:41:08,855 - INFO - 1 change detected
+2025-10-14 03:41:09,205 - INFO - 1 change detected
+2025-10-14 03:41:09,555 - INFO - 1 change detected
+2025-10-14 03:41:09,906 - INFO - 1 change detected
+2025-10-14 03:41:10,256 - INFO - 1 change detected
+2025-10-14 03:41:10,607 - INFO - 1 change detected
+2025-10-14 03:41:10,957 - INFO - 1 change detected
+2025-10-14 03:41:11,308 - INFO - 1 change detected
+2025-10-14 03:41:11,658 - INFO - 1 change detected
+2025-10-14 03:41:12,009 - INFO - 1 change detected
+2025-10-14 03:41:12,359 - INFO - 1 change detected
+2025-10-14 03:41:12,709 - INFO - 1 change detected
+2025-10-14 03:41:13,060 - INFO - 1 change detected
+2025-10-14 03:41:13,410 - INFO - 1 change detected
+2025-10-14 03:41:13,761 - INFO - 1 change detected
+2025-10-14 03:41:14,111 - INFO - 1 change detected
+2025-10-14 03:41:14,462 - INFO - 1 change detected
+2025-10-14 03:41:14,812 - INFO - 1 change detected
+2025-10-14 03:41:15,163 - INFO - 1 change detected
+2025-10-14 03:41:15,513 - INFO - 1 change detected
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1889959]
+INFO:     Stopping reloader process [1889918]

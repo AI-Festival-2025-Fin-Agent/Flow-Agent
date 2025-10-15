@@ -1,0 +1,3371 @@
+{
+  "test_summary": {
+    "total_tests": 147,
+    "successful": 143,
+    "failed": 4,
+    "success_rate": 97.28,
+    "total_execution_time_seconds": 1649.9,
+    "average_time_per_query": 11.22,
+    "test_timestamp": "2025-10-06T02:19:37.242038"
+  },
+  "detailed_results": [
+    {
+      "question": "동부건설우의 2024-11-06 시가은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"동부건설우\", \"date\": \"2024-11-06\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "동부건설우",
+            "date": "2024-11-06"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '동부건설우', 'date': '2024-11-06'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:52:12.809676",
+      "query_type": "simple",
+      "test_index": "simple_1",
+      "execution_time_seconds": 5.46
+    },
+    {
+      "question": "2025-06-23에 상승한 종목은 몇 개인가?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2025-06-23\"}}  \n**설명**: 2025년 6월 23일의 시장 통계 중 상승 종목 수를 조회하기 위해 `get_market_stats` 도구를 사용합니다. 날짜 인자를 통해 해당 일자의 데이터를 요청합니다. 결과 응답에서 상승 종목 수를 추출하면 됩니다.  \n\n*주의사항*: 실제 구현 시 `get_market_stats` 도구의 정확한 인수 구조가 문서와 다를 수 있으므로, 날짜 필드의 유무와 정확한 명명 규칙을 확인해야 합니다. 만약 날짜 필드가 없다면 추가적인 조치가 필요하나, 주어진 정보로는 이 접근법이 최선으로 보입니다.",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2025-06-23"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2025-06-23'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:52:25.522321",
+      "query_type": "simple",
+      "test_index": "simple_2",
+      "execution_time_seconds": 7.71
+    },
+    {
+      "question": "금양그린파워의 2024-08-08 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"금양그린파워\", \"date\": \"2024-08-08\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "금양그린파워",
+            "date": "2024-08-08"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '금양그린파워', 'date': '2024-08-08'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:52:34.845492",
+      "query_type": "simple",
+      "test_index": "simple_3",
+      "execution_time_seconds": 4.32
+    },
+    {
+      "question": "2025-06-26 KOSPI 시장에 거래된 종목 수는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2025-06-26\"}}  \n**설명**:  \n사용자는 2025년 6월 26일의 **KOSPI 시장 거래 종목 수**를 묻고 있습니다. 이를 위해 `get_market_stats` 도구를 사용하여 해당 날짜의 **KOSPI 종목 수** 데이터를 조회합니다. 이 도구는 전체/상승/하락/보합 종목수와 함께 KOSPI/KOSDAQ 종목수도 포함하기 때문에 정확히 원하는 정보를 추출할 수 있습니다.  \n\n결과 예시:  \n```json\n{\n  \"total_kospi_count\": 800,\n  \"rising_kospi_count\": 150,\n  ...\n}\n```  \n여기서 `total_kospi_count` 값이 2025-06-26의 KOSPI 거래 종목 수가 됩니다.",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2025-06-26"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2025-06-26'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:52:47.826432",
+      "query_type": "simple",
+      "test_index": "simple_4",
+      "execution_time_seconds": 7.98
+    },
+    {
+      "question": "2025-01-20에서 KOSPI에서 상승률 높은 종목 5개는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2025-01-20\", \"ranking_type\": \"상승률\", \"top_n\": 5}}",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2025-01-20",
+            "ranking_type": "상승률",
+            "top_n": 5
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2025-01-20', 'ranking_type': '상승률', 'top_n': 5}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:52:58.593907",
+      "query_type": "simple",
+      "test_index": "simple_5",
+      "execution_time_seconds": 5.77
+    },
+    {
+      "question": "2025-01-20 KOSPI 시장에서 거래량이 가장 많은 종목은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2025-01-20\", \"rank_type\": \"top_1\"}}  \n**설명**:  \n사용자는 2025년 1월 20일 KOSPI 시장의 **거래량 최상위 종목**을 찾고자 합니다. 이를 위해 `search_volume` 도구를 사용하여 해당 날짜의 거래량 순위 1위 종목을 조회하겠습니다.  \n\n---  \n**잠재적 문제점 & 해결 방안**:  \n1. **날짜 파라미터 미지원 가능성**: 일부 도구 구현체에서는 날짜 필드를 지원하지 않을 수 있습니다.  \n   → 실패 시 대체 전략: `text2sql` 또는 `get_stock_price`를 활용해 직접 데이터 추출 후 정렬 비교.  \n\n2. **KOSPI 한정 여부**: 기본 설정이 KOSDAQ 포함일 수 있음.  \n   → 수정 사항: `market_type`: \"KOSPI\" 옵션 추가 필요성 검토.  \n\n혴�기 단계에서는 핵심 도구(`search_volume`) 실행 후 결과에 따라 유동적으로 대응할 계획입니다.",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2025-01-20",
+            "rank_type": "top_1"
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2025-01-20', 'rank_type': 'top_1'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:53:12.718930",
+      "query_type": "simple",
+      "test_index": "simple_6",
+      "execution_time_seconds": 9.12
+    },
+    {
+      "question": "현대사료의 2025-05-12 시가은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"현대사료\", \"date\": \"2025-05-12\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "현대사료",
+            "date": "2025-05-12"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '현대사료', 'date': '2025-05-12'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:53:22.453001",
+      "query_type": "simple",
+      "test_index": "simple_7",
+      "execution_time_seconds": 4.73
+    },
+    {
+      "question": "피코그램의 2024-09-10 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"피코그램\", \"date\": \"2024-09-10\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "피코그램",
+            "date": "2024-09-10"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '피코그램', 'date': '2024-09-10'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:53:32.767005",
+      "query_type": "simple",
+      "test_index": "simple_8",
+      "execution_time_seconds": 5.31
+    },
+    {
+      "question": "레이언스의 2025-06-24 등락률은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"레이언스\", \"date\": \"2025-06-24\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "레이언스",
+            "date": "2025-06-24"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '레이언스', 'date': '2025-06-24'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:53:42.198256",
+      "query_type": "simple",
+      "test_index": "simple_9",
+      "execution_time_seconds": 4.43
+    },
+    {
+      "question": "2024-07-15 KOSPI 지수는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_index\", \"args\": {\"date\": \"2024-07-15\", \"index\": \"KOSPI\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_market_index",
+          "args": {
+            "date": "2024-07-15",
+            "index": "KOSPI"
+          }
+        },
+        {
+          "name": "get_market_index",
+          "args": "{'date': '2024-07-15', 'index': 'KOSPI'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:53:51.179725",
+      "query_type": "simple",
+      "test_index": "simple_10",
+      "execution_time_seconds": 3.98
+    },
+    {
+      "question": "2025-03-05에서 KOSDAQ에서 하락률 높은 종목 5개는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"market\": \"KOSDAQ\", \"date\": \"2025-03-05\", \"condition\": \"하락\", \"top_n\": 5}}",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "market": "KOSDAQ",
+            "date": "2025-03-05",
+            "condition": "하락",
+            "top_n": 5
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'market': 'KOSDAQ', 'date': '2025-03-05', 'condition': '하락', 'top_n': 5}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:54:03.768153",
+      "query_type": "simple",
+      "test_index": "simple_11",
+      "execution_time_seconds": 7.59
+    },
+    {
+      "question": "2024-09-05에서 KOSDAQ에서 하락률 높은 종목 5개는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"market\": \"KOSDAQ\", \"date\": \"2024-09-05\", \"change_type\": \"하락률\", \"ranking\": \"top_5\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "market": "KOSDAQ",
+            "date": "2024-09-05",
+            "change_type": "하락률",
+            "ranking": "top_5"
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'market': 'KOSDAQ', 'date': '2024-09-05', 'change_type': '하락률', 'ranking': 'top_5'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:54:16.231749",
+      "query_type": "simple",
+      "test_index": "simple_12",
+      "execution_time_seconds": 7.46
+    },
+    {
+      "question": "KOSDAQ에서 신라젠의 2024-08-20 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"symbol\": \"신라젠\", \"date\": \"2024-08-20\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "symbol": "신라젠",
+            "date": "2024-08-20"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'symbol': '신라젠', 'date': '2024-08-20'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:54:26.538440",
+      "query_type": "simple",
+      "test_index": "simple_13",
+      "execution_time_seconds": 5.31
+    },
+    {
+      "question": "2024-10-11에서 KOSPI에서 거래량 많은 종목 10개는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM kospi WHERE date = '2024-10-11' ORDER BY volume DESC LIMIT 10\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM kospi WHERE date = '2024-10-11' ORDER BY volume DESC LIMIT 10"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM kospi WHERE date = '2024-10-11' ORDER BY volume DESC LIMIT 10"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:54:39.095330",
+      "query_type": "simple",
+      "test_index": "simple_14",
+      "execution_time_seconds": 7.56
+    },
+    {
+      "question": "윤성에프앤씨의 2024-12-30 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"symbol\": \"윤성에프앤씨\", \"date\": \"2024-12-30\", \"field\": \"priceClose\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "symbol": "윤성에프앤씨",
+            "date": "2024-12-30",
+            "field": "priceClose"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'symbol': '윤성에프앤씨', 'date': '2024-12-30', 'field': 'priceClose'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:54:48.476631",
+      "query_type": "simple",
+      "test_index": "simple_15",
+      "execution_time_seconds": 4.38
+    },
+    {
+      "question": "씨싸이트의 2024-11-13 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"씨싸이트\", \"date\": \"2024-11-13\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "씨싸이트",
+            "date": "2024-11-13"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '씨싸이트', 'date': '2024-11-13'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:54:58.581409",
+      "query_type": "simple",
+      "test_index": "simple_16",
+      "execution_time_seconds": 5.1
+    },
+    {
+      "question": "2024-10-07에서 KOSDAQ에서 가장 비싼 종목 3개는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"market\": \"KOSDAQ\", \"rank_type\": \"top_n\", \"top_n\": 3, \"date\": \"2024-10-07\", \"price_type\": \"high\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "market": "KOSDAQ",
+            "rank_type": "top_n",
+            "top_n": 3,
+            "date": "2024-10-07",
+            "price_type": "high"
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'market': 'KOSDAQ', 'rank_type': 'top_n', 'top_n': 3, 'date': '2024-10-07', 'price_type': 'high'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:55:10.730729",
+      "query_type": "simple",
+      "test_index": "simple_17",
+      "execution_time_seconds": 7.15
+    },
+    {
+      "question": "산돌의 2025-03-06 고가은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"symbol\": \"산돌\", \"date\": \"2025-03-06\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "symbol": "산돌",
+            "date": "2025-03-06"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'symbol': '산돌', 'date': '2025-03-06'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:55:20.556184",
+      "query_type": "simple",
+      "test_index": "simple_18",
+      "execution_time_seconds": 4.83
+    },
+    {
+      "question": "2025-05-14에서 KOSPI에서 가장 비싼 종목 3개는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"date\": \"2025-05-14\", \"rank_type\": \"high\", \"price_field\": \"close\", \"top_n\": 3}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "date": "2025-05-14",
+            "rank_type": "high",
+            "price_field": "close",
+            "top_n": 3
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'date': '2025-05-14', 'rank_type': 'high', 'price_field': 'close', 'top_n': 3}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:55:31.705434",
+      "query_type": "simple",
+      "test_index": "simple_19",
+      "execution_time_seconds": 6.15
+    },
+    {
+      "question": "2025-06-27에서 거래량 기준 상위 10개 종목은?",
+      "ai_response": "사용자의 질문은 특정 날짜(2025-06-27)의 거래량 상위 10개 종목을 찾는 것입니다. 현재 제공되는 도구 중 **`search_volume`** 도구가 거래량 기준 순위 조회 기능을 제공합니다. 그러나 도구 설명에 따르면 일반적으로 최신 데이터 위주로 동작하며, 과거의 특정 날짜 데이터를 직접 조회하는 기능은 명시되지 않았습니다. \n\n따라서 다음과 같은 접근 방식을 제안합니다:\n\n1. **`search_volume`** 도구를 통해 최근 거래량 상위 종목을 먼저 확인\n2. 만약 과거 특정 날짜 데이터 조회가 필요하다면, 시스템 제약사항으로 정확한 답변 제공이 어려울 수 있음을 안내\n\n현재 구현된 도구 체계 내에서는 **과거 특정 일자의 거래량 순위**를 직접 조회하는 방법이 명확히 제시되지 않았으므로, 기본적인 응답 형식으로 도구를 호출해 보는 것이 최선입니다.\n\nTOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"rank_type\": \"top_10\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "rank_type": "top_10"
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'rank_type': 'top_10'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:55:44.837350",
+      "query_type": "simple",
+      "test_index": "simple_20",
+      "execution_time_seconds": 8.13
+    },
+    {
+      "question": "오로스테크놀로지의 2024-11-28 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"오로스테크놀로지\", \"date\": \"2024-11-28\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "오로스테크놀로지",
+            "date": "2024-11-28"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '오로스테크놀로지', 'date': '2024-11-28'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:55:54.721264",
+      "query_type": "simple",
+      "test_index": "simple_21",
+      "execution_time_seconds": 4.88
+    },
+    {
+      "question": "삼성출판사의 2025-03-10 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"symbol\": \"삼성출판사\", \"date\": \"2025-03-10\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "symbol": "삼성출판사",
+            "date": "2025-03-10"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'symbol': '삼성출판사', 'date': '2025-03-10'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:56:04.129575",
+      "query_type": "simple",
+      "test_index": "simple_22",
+      "execution_time_seconds": 4.41
+    },
+    {
+      "question": "2024-12-04 KOSPI 시장에서 상승한 종목 수는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2024-12-04\"}} \n\n해당 도구의 결과에서 **상승 종목 수** 값을 추출하여 답변하겠습니다.  \n결과 데이터 구조 예시:  \n```json\n{\n  \"total_up\": 1500,\n  \"total_down\": 800,\n  ...\n}\n```\n여기서 `total_up` 값이 정답이 됩니다.  \n\n잠시만 기다려 주세요. 결과를 확인해 드리겠습니다.",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2024-12-04"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2024-12-04'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:56:15.009212",
+      "query_type": "simple",
+      "test_index": "simple_23",
+      "execution_time_seconds": 5.88
+    },
+    {
+      "question": "2024-07-18 전체 시장 거래대금은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2024-07-18\"}} \n\n해당 도구의 결과에서 **전체 거래대금** 값을 확인하면 답변을 제공할 수 있습니다. 결과는 {'total_trading_value': ...} 형태로 반환될 예정입니다.",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2024-07-18"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2024-07-18'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:56:24.466450",
+      "query_type": "simple",
+      "test_index": "simple_24",
+      "execution_time_seconds": 4.46
+    },
+    {
+      "question": "2024-12-24 KOSDAQ 시장에서 거래량이 가장 많은 종목은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2024-12-24\", \"market\": \"KOSDAQ\"}}  \n**결과 해석**:  \n현재 제공된 도구 중 **search_volume**이 거래량 기반 검색을 제공합니다. 이를 통해 2024-12-24 KOSDAQ 시장의 거래량 상위 종목을 확인할 수 있습니다. 단, 단일 최상위 종목만을 명시적으로 반환하지는 않으므로 결과 리스트에서 첫 번째 항목을 참고하시면 됩니다.  \n\n추가 고려사항:  \n1. 만약 특정 종목명을 알고 싶다면 **search_company**로 종목명을 먼저 조회한 후 거래량 데이터를 확인할 수 있습니다.  \n2. 보다 정밀한 분석을 원한다면 **text2sql**을 활용해 \"2024-12-24 KOSDAQ 일별 거래량 TOP 1 종목\"이라는 쿼리를 생성할 것을 제안드립니다.  \n\n현재 단계에서는 **search_volume** 결과를 바탕으로 답변드리며, 필요시 추가 도구 사용을 권장합니다.",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2024-12-24",
+            "market": "KOSDAQ"
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2024-12-24', 'market': 'KOSDAQ'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:56:38.407146",
+      "query_type": "simple",
+      "test_index": "simple_25",
+      "execution_time_seconds": 8.94
+    },
+    {
+      "question": "제일테크노스의 2024-11-21 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"제일테크노스\", \"date\": \"2024-11-21\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "제일테크노스",
+            "date": "2024-11-21"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '제일테크노스', 'date': '2024-11-21'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:56:48.004114",
+      "query_type": "simple",
+      "test_index": "simple_26",
+      "execution_time_seconds": 4.6
+    },
+    {
+      "question": "제우스의 2024-08-07 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"제우스\", \"date\": \"2024-08-07\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "제우스",
+            "date": "2024-08-07"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '제우스', 'date': '2024-08-07'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:56:58.315469",
+      "query_type": "simple",
+      "test_index": "simple_27",
+      "execution_time_seconds": 5.31
+    },
+    {
+      "question": "2025-04-29에서 KOSPI에서 거래량 많은 종목 10개는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2025-04-29\", \"market\": \"KOSPI\", \"rank_count\": 10}}  \n**설명**: 2025년 4월 29일 KOSPI 시장의 거래량 상위 10개 종목을 찾기 위해 **거래량 기준 순위 검색** 도구를 사용합니다. `search_volume` 도구는 특정 날짜의 거래량 데이터에서 상위 N개 종목을 추출하며, 여기서는 `market`(시장 구분), `date`, `rank_count`(순위 개수) 매개변수를 활용합니다.  \n\n---\n\n**추가 고려사항**:  \n1. 실제 구현에서는 `search_volume` 도구의 정확한 API 스펙 확인이 필요하며, 특히 **날짜 포맷**, **시장 필터링 옵션** 등이 요구사항에 맞게 작동하는지 검증해야 합니다.  \n2. 만약 결과가 부족하거나 정확하지 않다면, 추가적인 검증을 위해 `text2sql` 또는 다른 보조 도구를 활용할 수 있습니다.",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2025-04-29",
+            "market": "KOSPI",
+            "rank_count": 10
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2025-04-29', 'market': 'KOSPI', 'rank_count': 10}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:57:11.467234",
+      "query_type": "simple",
+      "test_index": "simple_28",
+      "execution_time_seconds": 8.15
+    },
+    {
+      "question": "KOSPI에서 카프로의 2025-05-26 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_company\", \"args\": \"카프로\"}",
+      "parsed_tools": [
+        {
+          "name": "search_company",
+          "args": "카프로"
+        },
+        {
+          "name": "search_company",
+          "args": "카프로"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:57:20.320138",
+      "query_type": "simple",
+      "test_index": "simple_29",
+      "execution_time_seconds": 3.85
+    },
+    {
+      "question": "2025-04-04 KOSDAQ 시장에서 거래량이 가장 많은 종목은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2025-04-04\", \"market\": \"KOSDAQ\", \"rank_type\": \"top_1\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2025-04-04",
+            "market": "KOSDAQ",
+            "rank_type": "top_1"
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2025-04-04', 'market': 'KOSDAQ', 'rank_type': 'top_1'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:57:30.727717",
+      "query_type": "simple",
+      "test_index": "simple_30",
+      "execution_time_seconds": 5.41
+    },
+    {
+      "question": "동방의 2024-11-20 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"symbol\": \"동방\", \"date\": \"2024-11-20\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "symbol": "동방",
+            "date": "2024-11-20"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'symbol': '동방', 'date': '2024-11-20'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:57:39.573504",
+      "query_type": "simple",
+      "test_index": "simple_31",
+      "execution_time_seconds": 3.85
+    },
+    {
+      "question": "2024-07-30 KOSPI 시장에서 상승한 종목 수는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2024-07-30\"}}  \n**설명**:  \n사용자는 2024년 7월 30일 KOSPI 시장의 **상승 종목 수**를 요청했습니다. 이는 `get_market_stats` 도구를 사용해 조회 가능합니다. 해당 도구는 특정 날짜의 **상승/하락/보합 종목 수**, 전체 종목 수 등의 기본 시장 통계를 반환하며, 여기서 상승 종목 수를 추출하면 됩니다.  \n\n예상 결과 예시:  \n```json\n{\n  \"total_up\": 150,\n  \"total_down\": 50,\n  ...\n}\n```  \n결과에서 `\"total_up\"` 값을 제시하면 됩니다. 단, 실제 구현 시 날짜 파라미터 위치와 키 이름은 문서화된 사양에 따라 조정될 수 있습니다.",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2024-07-30"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2024-07-30'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:57:52.475239",
+      "query_type": "simple",
+      "test_index": "simple_32",
+      "execution_time_seconds": 7.9
+    },
+    {
+      "question": "2024-08-16에 상승한 종목은 몇 개인가?",
+      "ai_response": "현재 사용 가능한 도구들로는 **특정 과거의 상승 종목 수를 직접 조회하는 기능**이 명시되어 있지 않습니다. `get_market_stats`는 실시간 또는 최근 시장의 상태를 보여주지만, 과거 특정 날짜로의 시간 여행(time travel) 기능이 없어 보입니다. 또한 `count_cross_signals`, `search_compound` 등도 특정 날짜별 상승 종목 수를 직접 계산하도록 설계되지 않았습니다.\n\n### 결론:\n현재 제공된 도구 세트로는 **2024-08-16에 상승한 종목 수**를 직접 조회할 수 없습니다.  \n다만 다음과 같은 우회적 접근법이 가능합니다:\n\n1. **과거 데이터 저장 시스템 필요성**: 만약 과거 데이터를 저장하는 백엔드가 있다면, 이를 쿼리하기 위한 별도의 API가 필요합니다.  \n2. **증권사 API 활용 제안**: 실제 증권 플랫폼들은 역사적 주가 데이터를 제공하는 경우가 많으니, 한국거래소(KRX)나 증권사의 공식 API 사용을 권장드립니다.  \n\n추가적인 기술적 지원이 필요하다면 알려주세요!",
+      "parsed_tools": [],
+      "tool_count": 0,
+      "status": "parsing_failed",
+      "timestamp": "2025-10-06T01:58:05.388718",
+      "query_type": "simple",
+      "test_index": "simple_33",
+      "execution_time_seconds": 7.91
+    },
+    {
+      "question": "2024-07-29에 하락한 종목은 몇 개인가?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2024-07-29\"}}  \n결과에서 **하락 종목 수** 값을 확인하시면 됩니다.  \n\n예상 답변 예시:  \n{\"total_down\": 150} → 2024-07-29에 총 150개 종목이 하락했습니다.  \n\n실제 결과는 위 도구의 실행 결과에 따라 달라집니다.",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2024-07-29"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2024-07-29'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:58:16.003771",
+      "query_type": "simple",
+      "test_index": "simple_34",
+      "execution_time_seconds": 5.61
+    },
+    {
+      "question": "CJ제일제당 우의 2025-05-31 저가은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"symbol\": \"CJ제일제당 우\", \"date\": \"2025-05-31\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "symbol": "CJ제일제당 우",
+            "date": "2025-05-31"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'symbol': 'CJ제일제당 우', 'date': '2025-05-31'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:58:25.585625",
+      "query_type": "simple",
+      "test_index": "simple_35",
+      "execution_time_seconds": 4.58
+    },
+    {
+      "question": "2024-12-04 전체 시장 거래대금은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": \"date=2024-12-04\"}",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": "date=2024-12-04"
+        },
+        {
+          "name": "get_market_stats",
+          "args": "date=2024-12-04"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:58:34.432632",
+      "query_type": "simple",
+      "test_index": "simple_36",
+      "execution_time_seconds": 3.85
+    },
+    {
+      "question": "2024-11-21 KOSPI 지수는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_index\", \"args\": {\"index_type\": \"KOSPI\", \"date\": \"2024-11-21\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_market_index",
+          "args": {
+            "index_type": "KOSPI",
+            "date": "2024-11-21"
+          }
+        },
+        {
+          "name": "get_market_index",
+          "args": "{'index_type': 'KOSPI', 'date': '2024-11-21'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:58:42.987380",
+      "query_type": "simple",
+      "test_index": "simple_37",
+      "execution_time_seconds": 3.55
+    },
+    {
+      "question": "키스트론의 2024-11-04 고가은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"키스트론\", \"date\": \"2024-11-04\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "키스트론",
+            "date": "2024-11-04"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '키스트론', 'date': '2024-11-04'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:58:52.407936",
+      "query_type": "simple",
+      "test_index": "simple_38",
+      "execution_time_seconds": 4.42
+    },
+    {
+      "question": "화승인더의 2024-09-04 시가은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"stock_name\": \"화승인더\", \"date\": \"2024-09-04\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "stock_name": "화승인더",
+            "date": "2024-09-04"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'stock_name': '화승인더', 'date': '2024-09-04'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:59:01.450197",
+      "query_type": "simple",
+      "test_index": "simple_39",
+      "execution_time_seconds": 4.04
+    },
+    {
+      "question": "2024-10-29에서 KOSPI에서 거래량 많은 종목 10개는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM kospi_data WHERE date = '2024-10-29' ORDER BY volume DESC LIMIT 10;\"}\n\n해당 쿼리는 2024년 10월 29일자 KOSPI 시장에서 거래량(volume)을 내림차순으로 정렬한 뒤 상위 10개 종목을 추출하도록 설계되었습니다. 결과로는 종목명, 코드, 거래량 등의 정보가 반환될 것으로 예상됩니다.",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM kospi_data WHERE date = '2024-10-29' ORDER BY volume DESC LIMIT 10;"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM kospi_data WHERE date = '2024-10-29' ORDER BY volume DESC LIMIT 10;"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:59:13.784375",
+      "query_type": "simple",
+      "test_index": "simple_40",
+      "execution_time_seconds": 7.33
+    },
+    {
+      "question": "2024-07-01 KOSPI 시장에서 거래량이 가장 많은 종목은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2024-07-01\", \"market\": \"KOSPI\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2024-07-01",
+            "market": "KOSPI"
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2024-07-01', 'market': 'KOSPI'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:59:24.917457",
+      "query_type": "simple",
+      "test_index": "simple_41",
+      "execution_time_seconds": 6.13
+    },
+    {
+      "question": "2025-02-17에서 거래량 기준 상위 10개 종목은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2025-02-17\", \"ranking\": \"top_10\"}} \n\n해당 도구는 특정 날짜의 거래량 기준 상위 종목을 검색하며, 여기서는 2025년 2월 17일의 거래량 상위 10개 종목을 찾기 위해 date와 ranking 파라미터를 설정했습니다.",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2025-02-17",
+            "ranking": "top_10"
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2025-02-17', 'ranking': 'top_10'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:59:36.264818",
+      "query_type": "simple",
+      "test_index": "simple_42",
+      "execution_time_seconds": 6.35
+    },
+    {
+      "question": "2025-05-26에 하락한 종목은 몇 개인가?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2025-05-26\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2025-05-26"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2025-05-26'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:59:45.230202",
+      "query_type": "simple",
+      "test_index": "simple_43",
+      "execution_time_seconds": 3.97
+    },
+    {
+      "question": "2025-02-15 KOSPI 시장에서 가장 비싼 종목은?",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT TOP 1 * FROM market_data WHERE date='2025-02-15' ORDER BY price DESC\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT TOP 1 * FROM market_data WHERE date='2025-02-15' ORDER BY price DESC"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT TOP 1 * FROM market_data WHERE date='2025-02-15' ORDER BY price DESC"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T01:59:56.510899",
+      "query_type": "simple",
+      "test_index": "simple_44",
+      "execution_time_seconds": 6.28
+    },
+    {
+      "question": "2025-04-22에 상승한 종목은 몇 개인가?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2025-04-22\"}}  \n해당 도구의 결과 중 **상승 종목 수** 값을 추출하여 답변합니다.  \n\n예상되는 응답 포맷:  \n상승 종목 수는 [숫자]개입니다.  \n\n*주의: 실제 구현에서는 `get_market_stats` 결과가 JSON 형태로 반환되며, 그 안에서 `\"up_count\"` 필드를 찾아야 함.*",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2025-04-22"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2025-04-22'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:00:06.865456",
+      "query_type": "simple",
+      "test_index": "simple_45",
+      "execution_time_seconds": 5.35
+    },
+    {
+      "question": "KOSDAQ에서 코스메카코리아의 2025-02-26 종가는?",
+      "ai_response": "[{\"name\": \"search_company\", \"args\": \"코스메카코리아\"}]",
+      "parsed_tools": [
+        {
+          "name": "search_company",
+          "args": "코스메카코리아"
+        }
+      ],
+      "tool_count": 1,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:00:18.750810",
+      "query_type": "simple",
+      "test_index": "simple_46",
+      "execution_time_seconds": 6.89
+    },
+    {
+      "question": "2025-06-27에 상승한 종목은 몇 개인가?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_market_stats\", \"args\": {\"date\": \"2025-06-27\"}}  \n**설명**: 2025년 6월 27일의 시장 통계 중 상승 종목 수를 확인하기 위해 `get_market_stats` 도구를 사용합니다. 반환된 데이터에서 상승 종목 수를 추출할 예정입니다.  \n\n결과 예시:  \n```json\n{\n  \"total_up\": 1500,\n  ...\n}\n```\n이 값으로 응답하겠습니다.",
+      "parsed_tools": [
+        {
+          "name": "get_market_stats",
+          "args": {
+            "date": "2025-06-27"
+          }
+        },
+        {
+          "name": "get_market_stats",
+          "args": "{'date': '2025-06-27'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:00:28.883014",
+      "query_type": "simple",
+      "test_index": "simple_47",
+      "execution_time_seconds": 5.13
+    },
+    {
+      "question": "KOSPI에서 NICE평가정보의 2024-07-19 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_company\", \"args\": \"NICE평가정보\"}  \n\n**설명**:  \n먼저 \"NICE평가정보\"의 정확한 종목 코드를 찾기 위해 `search_company` 도구를 사용합니다. 이후 얻은 종목 코드와 함께 `get_stock_price` 도구를 사용해 2024-07-19의 종가를 조회할 계획입니다. 다만 현재 단계에서는 종목 코드 정보가 없으므로, 첫 번째로 회사명 검색부터 진행합니다.",
+      "parsed_tools": [
+        {
+          "name": "search_company",
+          "args": "NICE평가정보"
+        },
+        {
+          "name": "search_company",
+          "args": "NICE평가정보"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:00:43.336519",
+      "query_type": "simple",
+      "test_index": "simple_48",
+      "execution_time_seconds": 9.45
+    },
+    {
+      "question": "WISCOM의 2025-01-06 종가는?",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_stock_price\", \"args\": {\"symbol\": \"WISCOM\", \"date\": \"2025-01-06\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_stock_price",
+          "args": {
+            "symbol": "WISCOM",
+            "date": "2025-01-06"
+          }
+        },
+        {
+          "name": "get_stock_price",
+          "args": "{'symbol': 'WISCOM', 'date': '2025-01-06'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:00:53.664731",
+      "query_type": "simple",
+      "test_index": "simple_49",
+      "execution_time_seconds": 5.33
+    },
+    {
+      "question": "2025-05-14에 거래량이 전날대비 300% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"threshold\": 3}}  \n**설명**:  \n사용자는 **2025-05-14**에 **전날 대비 거래량이 300% 이상 증가한 종목**을 찾고자 합니다.  \n\n제공된 도구 중 **`get_volume_surge`**는 거래량 급증 종목을 검색하며, **임계값**으로 1.0(100%), 2.0(200%), 3.0(300%), 5.0(500%) 등을 입력받아 해당 배수 이상 급증한 종목을 필터링합니다.  \n\n다만 주의사항이 있습니다:  \n1. 도구 설명에 따르면 \"**20일 평균 대비**\" 거래량 급증 여부를 판단한다고 명시되어 있으나, 사용자는 \"**전날 대비**\" 비교를 요구했습니다.  \n2. 실제 데이터와의 일치 여부는 추가 검증이 필요할 수 있습니다.  \n\n현재 가용한 도구로는 **`get_volume_surge`**를 사용하는 것이 최선의 선택이지만, 정확한 결과를 얻으려면 **`text2sql`** 도구를 활용해 SQL 쿼리로 전날 대비 300% 이상 증가한 종목을 직접 추출하는 방법도 고려될 수 있습니다.  \n\n우선 **`get_volume_surge`**로 실행하여 결과를 확인하겠습니다.",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "threshold": 3
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'threshold': 3}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:01:09.494973",
+      "query_type": "conditional",
+      "test_index": "conditional_1",
+      "execution_time_seconds": 10.83
+    },
+    {
+      "question": "2024-08-30에 등락률이 +5% 이상이면서 거래량이 전날대비 300% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "사용자의 요구사항을 충족시키기 위해 다음 단계를 따릅니다:\n\n1. **등락률 +5% 이상 종목 검색**:  \n   ```json\n   TOOL_CALL: { \"name\": \"search_price_change\", \"args\": { \"change_type\": \"상승률\", \"min_rate\": \"+5%\", \"max_rate\": null } }\n   ```\n\n2. **전날 대비 거래량 300% 이상 증가 종목 검색**:  \n   - `get_volume_surge` 도구는 \"20일 평균 대비\"이므로 부적합합니다.  \n   - 대신 `text2sql`을 활용해 전날 대비 거래량 변화율 계산을 위한 쿼리 작성 필요  \n\n3. **복합 조건 결합**:  \n   최종적으로는 두 결과를 교차 검증하여 공통 종목을 찾아야 하나, 단일 도구로는 부족하므로 단계적 접근이 필요합니다.  \n\n우선 첫 번째 도구 호출 실행 후 결과에 대해 두 번째 조건을 적용하는 추가 작업이 필요할 것입니다.  \n\n**초기 실행 도구**:  \n```json\n{\"name\": \"search_price_change\", \"args\": {\"change_type\": \"상승률\", \"min_rate\": \"+5%\", \"max_rate\": null}}\n```",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "change_type": "상승률",
+            "min_rate": "+5%",
+            "max_rate": null
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'change_type': '상승률', 'min_rate': '+5%', 'max_rate': None}"
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'change_type': '상승률', 'min_rate': '+5%', 'max_rate': None}"
+        }
+      ],
+      "tool_count": 3,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:01:25.827571",
+      "query_type": "conditional",
+      "test_index": "conditional_2",
+      "execution_time_seconds": 11.33
+    },
+    {
+      "question": "2024-11-22에 거래량이 2000만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2024-11-22\", \"threshold\": 20000000}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2024-11-22",
+            "threshold": 20000000
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2024-11-22', 'threshold': 20000000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:01:36.384586",
+      "query_type": "conditional",
+      "test_index": "conditional_3",
+      "execution_time_seconds": 5.56
+    },
+    {
+      "question": "2025-05-20에 거래량이 1000만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"threshold\": 10000000, \"date\": \"2025-05-20\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "threshold": 10000000,
+            "date": "2025-05-20"
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'threshold': 10000000, 'date': '2025-05-20'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:01:46.467181",
+      "query_type": "conditional",
+      "test_index": "conditional_4",
+      "execution_time_seconds": 5.08
+    },
+    {
+      "question": "2025-01-16에 등락률이 +7% 이상이면서 거래량이 전날대비 100% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "먼저 등락률이 +7% 이상인 종목을 찾고, 그 중 거래량이 전날 대비 100% 이상 증가한 종목을 확인해야 합니다. 두 조건을 결합하여 검색하려면 다음과 같이 접근합니다:\n\n1. **등락률 조건**:  \n   ```json\n   TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"type\": \"up\", \"min_rate\": \"+7%\"}}\n   ```\n\n2. **거래량 조건**:  \n   ```json\n   TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2025-01-16\", \"threshold\": \"100%\", \"comparison_type\": \"yesterday\"}}\n   ```\n\n두 결과를 조합하여 최종 리스트를 얻어야 하지만, 단일 도구로는 복합 조건을 처리하기 어렵습니다. 따라서 첫 번째 도구로 등락률 높은 종목을 추출한 뒤, 해당 종목들을 대상으로 두 번째 도구를 실행하는 방식으로 진행할 것을 권장드립니다.  \n\n다만 현재 응답 단계에서는 단순화된 형태로 답변을 제시하므로, 실제 구현 시에는 중간 매개변수를 활용하거나 추가 로직이 필요합니다.  \n\n```json\n{\n  \"step_1\": {\n    \"name\": \"search_price_change\",\n    \"args\": {\"type\": \"up\", \"min_rate\": \"+7%\"}\n  },\n  \"step_2\": {\n    \"name\": \"get_volume_surge\",\n    \"args\": {\"date\": \"2025-01-16\", \"threshold\": \"100%\", \"comparison_type\": \"yesterday\"}\n  }\n}\n```\n위 단계를 차례로 실행하여 결과를 확인할 수 있습니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "type": "up",
+            "min_rate": "+7%"
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2025-01-16",
+            "threshold": "100%",
+            "comparison_type": "yesterday"
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'type': 'up', 'min_rate': '+7%'}"
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2025-01-16', 'threshold': '100%', 'comparison_type': 'yesterday'}"
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'type': 'up', 'min_rate': '+7%'}"
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2025-01-16', 'threshold': '100%', 'comparison_type': 'yesterday'}"
+        }
+      ],
+      "tool_count": 6,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:02:02.363609",
+      "query_type": "conditional",
+      "test_index": "conditional_5",
+      "execution_time_seconds": 10.9
+    },
+    {
+      "question": "2024-09-09에 등락률이 -10% 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2024-09-09\", \"change_type\": \"하락률\", \"min\": \"-inf\", \"max\": \"-10%\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2024-09-09",
+            "change_type": "하락률",
+            "min": "-inf",
+            "max": "-10%"
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2024-09-09', 'change_type': '하락률', 'min': '-inf', 'max': '-10%'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:02:11.847720",
+      "query_type": "conditional",
+      "test_index": "conditional_6",
+      "execution_time_seconds": 4.48
+    },
+    {
+      "question": "2025-06-25에 KOSPI 시장에서 등락률이 +10% 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"market\": \"KOSPI\", \"date\": \"2025-06-25\", \"condition\": \">+10%\", \"type\": \"rise\"}}\n\n해당 도구는 2025년 6월 25일 KOSPI 시장에서 등락률이 +10% 이상 상승한 종목들을 검색하여 결과를 반환할 것입니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "market": "KOSPI",
+            "date": "2025-06-25",
+            "condition": ">+10%",
+            "type": "rise"
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'market': 'KOSPI', 'date': '2025-06-25', 'condition': '>+10%', 'type': 'rise'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:02:24.063979",
+      "query_type": "conditional",
+      "test_index": "conditional_7",
+      "execution_time_seconds": 7.22
+    },
+    {
+      "question": "2025-05-16에 종가가 10만원 이상 20만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"date\": \"2025-05-16\", \"price_type\": \"종가\", \"min_price\": 100000, \"max_price\": 200000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "date": "2025-05-16",
+            "price_type": "종가",
+            "min_price": 100000,
+            "max_price": 200000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'date': '2025-05-16', 'price_type': '종가', 'min_price': 100000, 'max_price': 200000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:02:33.864963",
+      "query_type": "conditional",
+      "test_index": "conditional_8",
+      "execution_time_seconds": 4.8
+    },
+    {
+      "question": "2025-04-02에 등락률이 +3% 이상이면서 거래량이 전날대비 100% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"change_type\": \"up\", \"min_rate\": 3}}\nTOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"days\": 1, \"threshold\": 100}}\n\n두 도구의 결과를 결합해 최종 종목을 추출해야 하지만, 현재 단일 도구로는 동시 조건을 처리할 수 없습니다. 따라서 먼저 등락률 조건(`search_price_change`)으로 종목을 필터링한 뒤, 그 결과에서 거래량 급증 조건(`get_volume_surge`)을 추가로 적용해야 합니다. 실제 구현에서는 두 결과를 조합하는 추가 로직이 필요합니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "change_type": "up",
+            "min_rate": 3
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "days": 1,
+            "threshold": 100
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'change_type': 'up', 'min_rate': 3}"
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'days': 1, 'threshold': 100}"
+        }
+      ],
+      "tool_count": 4,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:02:47.681155",
+      "query_type": "conditional",
+      "test_index": "conditional_9",
+      "execution_time_seconds": 8.82
+    },
+    {
+      "question": "2025-04-30에 종가가 20만원 이상 50만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"date\": \"2025-04-30\", \"price_type\": \"종가\", \"min_price\": 200000, \"max_price\": 500000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "date": "2025-04-30",
+            "price_type": "종가",
+            "min_price": 200000,
+            "max_price": 500000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'date': '2025-04-30', 'price_type': '종가', 'min_price': 200000, 'max_price': 500000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:02:58.636174",
+      "query_type": "conditional",
+      "test_index": "conditional_10",
+      "execution_time_seconds": 5.95
+    },
+    {
+      "question": "2024-11-19에 등락률이 +2% 이상이면서 거래량이 전날대비 150% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"change_type\": \"up\", \"min_rate\": 2}}\nTOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"threshold\": 150}}\n\n두 도구의 결과를 결합하여 공통된 종목을 추출해야 하지만, 현재 단일 응답 형식으로 제한되어 있으므로 우선 두 조건을 개별적으로 확인하는 방식으로 진행하겠습니다. 실제 구현 환경에서는 두 결과의 교차 분석을 추가적으로 수행해야 합니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "change_type": "up",
+            "min_rate": 2
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "threshold": 150
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'change_type': 'up', 'min_rate': 2}"
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'threshold': 150}"
+        }
+      ],
+      "tool_count": 4,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:03:12.519655",
+      "query_type": "conditional",
+      "test_index": "conditional_11",
+      "execution_time_seconds": 8.88
+    },
+    {
+      "question": "2025-01-31에 종가가 1만원 이상 5만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"price_type\": \"종가\", \"start_price\": 10000, \"end_price\": 50000, \"date\": \"2025-01-31\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "price_type": "종가",
+            "start_price": 10000,
+            "end_price": 50000,
+            "date": "2025-01-31"
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'price_type': '종가', 'start_price': 10000, 'end_price': 50000, 'date': '2025-01-31'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:03:21.760632",
+      "query_type": "conditional",
+      "test_index": "conditional_12",
+      "execution_time_seconds": 4.24
+    },
+    {
+      "question": "2024-09-26에 종가가 3만원 이상 8만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"price_type\": \"close\", \"date\": \"2024-09-26\", \"min_value\": 30000, \"max_value\": 80000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "price_type": "close",
+            "date": "2024-09-26",
+            "min_value": 30000,
+            "max_value": 80000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'price_type': 'close', 'date': '2024-09-26', 'min_value': 30000, 'max_value': 80000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:03:30.666258",
+      "query_type": "conditional",
+      "test_index": "conditional_13",
+      "execution_time_seconds": 3.91
+    },
+    {
+      "question": "2024-07-03에 등락률이 -10% 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2024-07-03\", \"min_change_rate\": -100, \"max_change_rate\": 0, \"direction\": \"down\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2024-07-03",
+            "min_change_rate": -100,
+            "max_change_rate": 0,
+            "direction": "down"
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2024-07-03', 'min_change_rate': -100, 'max_change_rate': 0, 'direction': 'down'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:03:43.285536",
+      "query_type": "conditional",
+      "test_index": "conditional_14",
+      "execution_time_seconds": 7.62
+    },
+    {
+      "question": "2024-10-14에 종가가 3만원 이상 8만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"price_type\": \"close\", \"min_price\": 30000, \"max_price\": 80000, \"date\": \"2024-10-14\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "price_type": "close",
+            "min_price": 30000,
+            "max_price": 80000,
+            "date": "2024-10-14"
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'price_type': 'close', 'min_price': 30000, 'max_price': 80000, 'date': '2024-10-14'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:03:53.397335",
+      "query_type": "conditional",
+      "test_index": "conditional_15",
+      "execution_time_seconds": 5.11
+    },
+    {
+      "question": "2024-10-18에 종가가 1만5천원 이상 3만5천원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"date\": \"2024-10-18\", \"price_type\": \"종가\", \"min_price\": 15000, \"max_price\": 35000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "date": "2024-10-18",
+            "price_type": "종가",
+            "min_price": 15000,
+            "max_price": 35000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'date': '2024-10-18', 'price_type': '종가', 'min_price': 15000, 'max_price': 35000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:04:03.707963",
+      "query_type": "conditional",
+      "test_index": "conditional_16",
+      "execution_time_seconds": 5.31
+    },
+    {
+      "question": "2024-10-21에 종가가 10만원 이상 20만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"price_type\": \"종가\", \"date\": \"2024-10-21\", \"min_price\": 100000, \"max_price\": 200000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "price_type": "종가",
+            "date": "2024-10-21",
+            "min_price": 100000,
+            "max_price": 200000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'price_type': '종가', 'date': '2024-10-21', 'min_price': 100000, 'max_price': 200000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:04:14.421350",
+      "query_type": "conditional",
+      "test_index": "conditional_17",
+      "execution_time_seconds": 5.71
+    },
+    {
+      "question": "2025-06-10에 거래량이 500만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2025-06-10\", \"threshold\": 5000000}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2025-06-10",
+            "threshold": 5000000
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2025-06-10', 'threshold': 5000000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:04:24.862025",
+      "query_type": "conditional",
+      "test_index": "conditional_18",
+      "execution_time_seconds": 5.44
+    },
+    {
+      "question": "2024-12-12에 거래량이 전날대비 500% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2024-12-12' AND (volume / LAG(volume) OVER (PARTITION BY ticker ORDER BY date) ) >= 5\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-12-12' AND (volume / LAG(volume) OVER (PARTITION BY ticker ORDER BY date) ) >= 5"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-12-12' AND (volume / LAG(volume) OVER (PARTITION BY ticker ORDER BY date) ) >= 5"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:04:36.333645",
+      "query_type": "conditional",
+      "test_index": "conditional_19",
+      "execution_time_seconds": 6.47
+    },
+    {
+      "question": "2024-09-11에 종가가 5만원 이상 10만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"price_type\": \"close\", \"date\": \"2024-09-11\", \"min_price\": 50000, \"max_price\": 100000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "price_type": "close",
+            "date": "2024-09-11",
+            "min_price": 50000,
+            "max_price": 100000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'price_type': 'close', 'date': '2024-09-11', 'min_price': 50000, 'max_price': 100000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:04:46.791365",
+      "query_type": "conditional",
+      "test_index": "conditional_20",
+      "execution_time_seconds": 5.46
+    },
+    {
+      "question": "2025-02-26에 등락률이 +7% 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2025-02-26\", \"change_type\": \"up\", \"min_rate\": 7}}  \n**설명**: 2025년 2월 26일에 등락률이 +7% 이상 상승한 종목을 찾기 위해 **search_price_change** 도구를 사용합니다. *change_type*은 \"up\"(상승), *min_rate*는 최소 상승률 7%로 설정했습니다. 결과는 해당 조건을 만족하는 종목 리스트로 반환됩니다.  \n\n---\n\n**주의사항**:  \n실제 도구 실행 환경에서는 정확한 인수 이름과 데이터 타입을 확인해야 합니다. 예를 들어 날짜 포맷(`YYYY-MM-DD`)이나 퍼센트 단위 입력 방식 등이 시스템 요구사항에 맞아야 합니다. 또한 일부 백엔드 시스템에서는 *min_rate* 대신 *rate_range* 등의 용어를 사용할 수 있으니 문서 참조가 필요합니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2025-02-26",
+            "change_type": "up",
+            "min_rate": 7
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2025-02-26', 'change_type': 'up', 'min_rate': 7}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:04:59.694466",
+      "query_type": "conditional",
+      "test_index": "conditional_21",
+      "execution_time_seconds": 7.9
+    },
+    {
+      "question": "2025-05-14에 등락률이 +15% 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"change_type\": \"상승률\", \"min_rate\": \"+15%\", \"date\": \"2025-05-14\"}} \n\n사용자의 요구사항은 **2025-05-14**에 **등락률이 +15% 이상인 종목**을 찾는 것입니다.  \n이를 위해 **등락률 기준 검색 도구(search_price_change)**를 사용합니다.  \n\n### 도구 선택 이유:\n1. **search_price_change**: \n   - 상승률/하락률 범위 검색 기능을 제공합니다.\n   - 최소 상승률(+15%)을 직접 설정해 해당 조건을 충족하는 종목을 찾을 수 있습니다.\n   - 필수 인수: `change_type`(상승률 또는 하락률), `min_rate`, `date`.\n\n2. **추가 설명**:  \n   - `get_stock_price`는 단일 종목별 세부 데이터를 조회하므로 대량 종목 필터링에 비효율적입니다.  \n   - `text2sql`은 복잡한 집계나 비교가 필요한 경우에 사용되며, 단순한 등락률 필터링에는 필요 없습니다.  \n\n결과로는 해당 날짜에 상승률이 +15% 이상인 종목 리스트가 반환될 것입니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "change_type": "상승률",
+            "min_rate": "+15%",
+            "date": "2025-05-14"
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'change_type': '상승률', 'min_rate': '+15%', 'date': '2025-05-14'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:05:15.424644",
+      "query_type": "conditional",
+      "test_index": "conditional_22",
+      "execution_time_seconds": 10.73
+    },
+    {
+      "question": "2024-09-25에 등락률이 +2% 이상이면서 거래량이 전날대비 300% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"change_type\": \"up\", \"min_rate\": 2}}\nTOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"threshold\": 3}} \n\n이 두 도구를 조합하여 등락률 +2% 이상 & 거래량 300% 이상 급증 종목을 찾습니다. 단, `get_volume_surge`는 기본적으로 **20일 평균 대비**이므로 정확한 전날 비교에는 한계가 있습니다. 보다 정확한 분석을 원하시면 추가 설명 부탁드립니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "change_type": "up",
+            "min_rate": 2
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "threshold": 3
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'change_type': 'up', 'min_rate': 2}"
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'threshold': 3}"
+        }
+      ],
+      "tool_count": 4,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:05:28.570932",
+      "query_type": "conditional",
+      "test_index": "conditional_23",
+      "execution_time_seconds": 8.15
+    },
+    {
+      "question": "2024-10-04에 등락률이 +3% 이상이면서 거래량이 전날대비 200% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"change_type\": \"상승률\", \"min_rate\": \"+3%\", \"max_rate\": null}}\n\n우선 등락률이 +3% 이상인 종목을 찾습니다. 이후 거래량 관련 조건은 현재 가용한 도구로는 정확히 구현하기 어렵지만, 위 결과를 바탕으로 추가 분석이 필요할 수 있습니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "change_type": "상승률",
+            "min_rate": "+3%",
+            "max_rate": null
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'change_type': '상승률', 'min_rate': '+3%', 'max_rate': None}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:05:39.777210",
+      "query_type": "conditional",
+      "test_index": "conditional_24",
+      "execution_time_seconds": 6.21
+    },
+    {
+      "question": "2024-10-11에 KOSPI 시장에서 종가가 1만원 이상 5만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"market\": \"KOSPI\", \"price_type\": \"close\", \"date\": \"2024-10-11\", \"min_price\": 10000, \"max_price\": 50000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "market": "KOSPI",
+            "price_type": "close",
+            "date": "2024-10-11",
+            "min_price": 10000,
+            "max_price": 50000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'market': 'KOSPI', 'price_type': 'close', 'date': '2024-10-11', 'min_price': 10000, 'max_price': 50000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:05:49.125683",
+      "query_type": "conditional",
+      "test_index": "conditional_25",
+      "execution_time_seconds": 4.35
+    },
+    {
+      "question": "2025-02-20에 종가가 5만원 이상 10만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"date\": \"2025-02-20\", \"price_type\": \"close\", \"min_price\": 50000, \"max_price\": 100000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "date": "2025-02-20",
+            "price_type": "close",
+            "min_price": 50000,
+            "max_price": 100000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'date': '2025-02-20', 'price_type': 'close', 'min_price': 50000, 'max_price': 100000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:05:58.832904",
+      "query_type": "conditional",
+      "test_index": "conditional_26",
+      "execution_time_seconds": 4.71
+    },
+    {
+      "question": "2024-10-14에 거래량이 100만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2024-10-14\", \"threshold\": 1000000}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2024-10-14",
+            "threshold": 1000000
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2024-10-14', 'threshold': 1000000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:06:08.878358",
+      "query_type": "conditional",
+      "test_index": "conditional_27",
+      "execution_time_seconds": 5.05
+    },
+    {
+      "question": "2025-06-17에 거래량이 전날대비 200% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2025-06-17' AND volume >= (volume_prev_day * 3)\"}\n\n이 쿼리는 2025년 6월 17일의 데이터 중 전날(6월 16일) 거래량의 3배(200% 증가) 이상인 종목을 선택합니다. 여기서 `volume_prev_day`는 이전 날짜의 거래량을 의미하며, 실제 구현에서는 조인 또는 서브쿼리가 필요할 수 있지만 기본적인 로직은 위와 같습니다.",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-06-17' AND volume >= (volume_prev_day * 3)"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-06-17' AND volume >= (volume_prev_day * 3)"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:06:20.074481",
+      "query_type": "conditional",
+      "test_index": "conditional_28",
+      "execution_time_seconds": 6.2
+    },
+    {
+      "question": "2024-11-28에 종가가 1만원 이상 5만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"date\": \"2024-11-28\", \"field\": \"close\", \"min\": 10000, \"max\": 50000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "date": "2024-11-28",
+            "field": "close",
+            "min": 10000,
+            "max": 50000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'date': '2024-11-28', 'field': 'close', 'min': 10000, 'max': 50000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:06:29.763921",
+      "query_type": "conditional",
+      "test_index": "conditional_29",
+      "execution_time_seconds": 4.69
+    },
+    {
+      "question": "2025-03-21에 거래량이 전날대비 150% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2025-03-21' AND volume >= LAG(volume) OVER (PARTITION BY company ORDER BY date) * 1.5\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-03-21' AND volume >= LAG(volume) OVER (PARTITION BY company ORDER BY date) * 1.5"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-03-21' AND volume >= LAG(volume) OVER (PARTITION BY company ORDER BY date) * 1.5"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:06:41.104614",
+      "query_type": "conditional",
+      "test_index": "conditional_30",
+      "execution_time_seconds": 6.34
+    },
+    {
+      "question": "2024-08-13에 거래량이 1000만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2024-08-13\", \"threshold\": 10000000}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2024-08-13",
+            "threshold": 10000000
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2024-08-13', 'threshold': 10000000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:06:50.858476",
+      "query_type": "conditional",
+      "test_index": "conditional_31",
+      "execution_time_seconds": 4.75
+    },
+    {
+      "question": "2024-10-23에 등락률이 +5% 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2024-10-23\", \"change_type\": \"up\", \"min_up_rate\": 5}}  \n이유: 사용자는 특정 날짜(2024-10-23)에 등락률이 +5% 이상 상승한 종목을 요청했습니다. **search_price_change** 도구는 등락률 기준으로 종목을 필터링하며, 상승률(min_up_rate), 하락률(max_down_rate) 등의 조건을 설정할 수 있습니다. 여기서는 상승 종목 중 최소 상승률이 5% 이상인 종목을 찾기 위해 위 파라미터로 호출합니다.  \n\n추가 확인 사항:  \n1. 일부 도구 설명에는 \"상승률/하락률 순위 조회 및 등락률 범위 검색 모두 가능\"이라고 되어 있어, 이 방식으로 검색 가능합니다.  \n2. 반환되는 데이터는 종목명, 코드, 등락률 등이 포함될 것으로 예상되며, 필요시 추가 필터를 적용할 수 있습니다.  \n\n결과 예시:  \n[{\"symbol\": \"A000000\", \"name\": \"종목명\", \"change_rate\": 6.7}, ...] 형태로 출력될 것입니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2024-10-23",
+            "change_type": "up",
+            "min_up_rate": 5
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2024-10-23', 'change_type': 'up', 'min_up_rate': 5}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:07:04.522922",
+      "query_type": "conditional",
+      "test_index": "conditional_32",
+      "execution_time_seconds": 8.66
+    },
+    {
+      "question": "2024-10-14에 KOSDAQ 시장에서 거래량이 100만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"market\": \"KOSDAQ\", \"date\": \"2024-10-14\", \"threshold\": 1000000}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "market": "KOSDAQ",
+            "date": "2024-10-14",
+            "threshold": 1000000
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'market': 'KOSDAQ', 'date': '2024-10-14', 'threshold': 1000000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:07:15.693224",
+      "query_type": "conditional",
+      "test_index": "conditional_33",
+      "execution_time_seconds": 6.17
+    },
+    {
+      "question": "2025-04-28에 거래량이 100만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2025-04-28\", \"threshold\": 1000000}}  \n**설명:**  \n사용자의 요구사항은 2025년 4월 28일에 거래량이 100만 주 이상인 종목을 찾는 것입니다. 이를 위해 `search_volume` 도구를 사용해 해당 날짜(date=2025-04-28)에서 거래량(volume_threshold=1000000)이 100만 주 이상인 종목을 검색합니다.  \n\n---  \n**결과 예시:**  \n```json\n{\n  \"results\": [\n    {\"symbol\": \"A001\", \"name\": \"주식회사 A\", \"volume\": 1500000},\n    {\"symbol\": \"B002\", \"name\": \"주식회사 B\", \"volume\": 1200000}\n  ]\n}\n```  \n위 결과는 가상의 데이터로, 실제로는 도구를 통해 얻은 결과를 반환받게 됩니다.",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2025-04-28",
+            "threshold": 1000000
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2025-04-28', 'threshold': 1000000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:07:28.660237",
+      "query_type": "conditional",
+      "test_index": "conditional_34",
+      "execution_time_seconds": 7.97
+    },
+    {
+      "question": "2025-02-28에 거래량이 전날대비 300% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2025-02-28' AND volume > (LAG(volume, 1) OVER (PARTITION BY company_id ORDER BY date)) * 4;\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-02-28' AND volume > (LAG(volume, 1) OVER (PARTITION BY company_id ORDER BY date)) * 4;"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-02-28' AND volume > (LAG(volume, 1) OVER (PARTITION BY company_id ORDER BY date)) * 4;"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:07:39.955053",
+      "query_type": "conditional",
+      "test_index": "conditional_35",
+      "execution_time_seconds": 6.29
+    },
+    {
+      "question": "2025-01-02에 등락률이 +10% 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2025-01-02\", \"change_type\": \"up\", \"min_rate\": 10}}  \n**설명**: 2025년 1월 2일에 등락률이 +10% 이상인 상승 종목을 찾기 위해 **search_price_change** 도구를 사용합니다. *change_type*은 \"up\"(상승), *min_rate*는 최소 등락률 10%로 설정했습니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2025-01-02",
+            "change_type": "up",
+            "min_rate": 10
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2025-01-02', 'change_type': 'up', 'min_rate': 10}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:07:50.640959",
+      "query_type": "conditional",
+      "test_index": "conditional_36",
+      "execution_time_seconds": 5.69
+    },
+    {
+      "question": "2024-09-30에 KOSDAQ 시장에서 종가가 10만원 이상 30만원 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price\", \"args\": {\"date\": \"2024-09-30\", \"market\": \"KOSDAQ\", \"price_type\": \"종가\", \"min_price\": 100000, \"max_price\": 300000}}",
+      "parsed_tools": [
+        {
+          "name": "search_price",
+          "args": {
+            "date": "2024-09-30",
+            "market": "KOSDAQ",
+            "price_type": "종가",
+            "min_price": 100000,
+            "max_price": 300000
+          }
+        },
+        {
+          "name": "search_price",
+          "args": "{'date': '2024-09-30', 'market': 'KOSDAQ', 'price_type': '종가', 'min_price': 100000, 'max_price': 300000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:08:00.434560",
+      "query_type": "conditional",
+      "test_index": "conditional_37",
+      "execution_time_seconds": 4.79
+    },
+    {
+      "question": "2025-03-10에 KOSDAQ 시장에서 거래량이 100만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"market\": \"KOSDAQ\", \"date\": \"2025-03-10\", \"threshold\": 1000000}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "market": "KOSDAQ",
+            "date": "2025-03-10",
+            "threshold": 1000000
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'market': 'KOSDAQ', 'date': '2025-03-10', 'threshold': 1000000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:08:10.728605",
+      "query_type": "conditional",
+      "test_index": "conditional_38",
+      "execution_time_seconds": 5.29
+    },
+    {
+      "question": "2025-05-28에 거래량이 전날대비 200% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT 종목명 FROM 거래량_데이터 WHERE 날짜='2025-05-28' AND 거래량 > LAG(거래량, 1) OVER (PARTITION BY 종목명 ORDER BY 날짜)*2\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT 종목명 FROM 거래량_데이터 WHERE 날짜='2025-05-28' AND 거래량 > LAG(거래량, 1) OVER (PARTITION BY 종목명 ORDER BY 날짜)*2"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT 종목명 FROM 거래량_데이터 WHERE 날짜='2025-05-28' AND 거래량 > LAG(거래량, 1) OVER (PARTITION BY 종목명 ORDER BY 날짜)*2"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:08:22.181300",
+      "query_type": "conditional",
+      "test_index": "conditional_39",
+      "execution_time_seconds": 6.45
+    },
+    {
+      "question": "2024-11-04에 거래량이 전날대비 300% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2024-11-04' AND volume >= LAG(volume) OVER (PARTITION BY company_id ORDER BY date) * 3\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-11-04' AND volume >= LAG(volume) OVER (PARTITION BY company_id ORDER BY date) * 3"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-11-04' AND volume >= LAG(volume) OVER (PARTITION BY company_id ORDER BY date) * 3"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:08:33.824028",
+      "query_type": "conditional",
+      "test_index": "conditional_40",
+      "execution_time_seconds": 6.64
+    },
+    {
+      "question": "2024-11-11에 등락률이 +20% 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2024-11-11\", \"change_type\": \"up\", \"min_rate\": 20}}  \n이유: 사용자는 특정 날짜(2024-11-11)에 등락률이 +20% 이상인 종목을 요청했습니다. `search_price_change` 도구는 등락률 기준으로 종목을 필터링하므로, 상승률(`up`) 범위로 최소 20% 이상의 종목을 검색하도록 파라미터를 구성했습니다.",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2024-11-11",
+            "change_type": "up",
+            "min_rate": 20
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2024-11-11', 'change_type': 'up', 'min_rate': 20}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:08:44.904615",
+      "query_type": "conditional",
+      "test_index": "conditional_41",
+      "execution_time_seconds": 6.08
+    },
+    {
+      "question": "2025-01-09에 거래량이 전날대비 300% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT 종목명 FROM 거래량_데이터 WHERE 날짜='2025-01-09' AND 거래량/(LEAD(거래량) OVER (PARTITION BY 종목명 ORDER BY 날짜)) >= 3\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT 종목명 FROM 거래량_데이터 WHERE 날짜='2025-01-09' AND 거래량/(LEAD(거래량) OVER (PARTITION BY 종목명 ORDER BY 날짜)) >= 3"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT 종목명 FROM 거래량_데이터 WHERE 날짜='2025-01-09' AND 거래량/(LEAD(거래량) OVER (PARTITION BY 종목명 ORDER BY 날짜)) >= 3"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:08:56.840122",
+      "query_type": "conditional",
+      "test_index": "conditional_42",
+      "execution_time_seconds": 6.94
+    },
+    {
+      "question": "2025-06-23에 등락률이 -15% 이하인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2025-06-23\", \"condition\": \"-15%\", \"type\": \"하락\"}}",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2025-06-23",
+            "condition": "-15%",
+            "type": "하락"
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2025-06-23', 'condition': '-15%', 'type': '하락'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:09:06.789541",
+      "query_type": "conditional",
+      "test_index": "conditional_43",
+      "execution_time_seconds": 4.95
+    },
+    {
+      "question": "2025-06-20에 거래량이 전날대비 500% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2025-06-20' AND volume > LAG(volume) OVER (PARTITION BY symbol ORDER BY date) * 5\"}  \n\n**설명**:  \n사용자는 2025-06-20일의 거래량이 **전날(2025-06-19)** 대비 500%(5배) 이상 증가한 종목을 찾고자 함.  \n이를 위해 window function(LAG)으로 전일 거래량을 참조하고, 현재 거래량이 그 값의 5배를 초과하는지 확인하는 SQL 쿼리 작성 필요.  \n`text2sql` 도구를 통해 해당 조건을 표현함.",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-06-20' AND volume > LAG(volume) OVER (PARTITION BY symbol ORDER BY date) * 5"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-06-20' AND volume > LAG(volume) OVER (PARTITION BY symbol ORDER BY date) * 5"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:09:21.643223",
+      "query_type": "conditional",
+      "test_index": "conditional_44",
+      "execution_time_seconds": 9.85
+    },
+    {
+      "question": "2024-12-03에 KOSDAQ 시장에서 거래량이 전날대비 200% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE market = 'KOSDAQ' AND date = '2024-12-03' AND volume > (LAG(volume, 1) OVER (PARTITION BY company ORDER BY date)) * 3\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE market = 'KOSDAQ' AND date = '2024-12-03' AND volume > (LAG(volume, 1) OVER (PARTITION BY company ORDER BY date)) * 3"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE market = 'KOSDAQ' AND date = '2024-12-03' AND volume > (LAG(volume, 1) OVER (PARTITION BY company ORDER BY date)) * 3"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:09:32.056524",
+      "query_type": "conditional",
+      "test_index": "conditional_45",
+      "execution_time_seconds": 5.41
+    },
+    {
+      "question": "2024-07-25에 거래량이 전날대비 150% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT 종목명, 거래량 FROM 거래데이터 WHERE 날짜='2024-07-25' AND 거래량 > 1.5 * LAG(거래량) OVER (PARTITION BY 종목명 ORDER BY 날짜 ROWS BETWEEN 1 PRECEDING AND 1 PRECEDING);\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT 종목명, 거래량 FROM 거래데이터 WHERE 날짜='2024-07-25' AND 거래량 > 1.5 * LAG(거래량) OVER (PARTITION BY 종목명 ORDER BY 날짜 ROWS BETWEEN 1 PRECEDING AND 1 PRECEDING);"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT 종목명, 거래량 FROM 거래데이터 WHERE 날짜='2024-07-25' AND 거래량 > 1.5 * LAG(거래량) OVER (PARTITION BY 종목명 ORDER BY 날짜 ROWS BETWEEN 1 PRECEDING AND 1 PRECEDING);"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:09:45.104291",
+      "query_type": "conditional",
+      "test_index": "conditional_46",
+      "execution_time_seconds": 8.05
+    },
+    {
+      "question": "2024-10-07에 거래량이 100만주 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_volume\", \"args\": {\"date\": \"2024-10-07\", \"threshold\": 1000000}}",
+      "parsed_tools": [
+        {
+          "name": "search_volume",
+          "args": {
+            "date": "2024-10-07",
+            "threshold": 1000000
+          }
+        },
+        {
+          "name": "search_volume",
+          "args": "{'date': '2024-10-07', 'threshold': 1000000}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:09:55.102161",
+      "query_type": "conditional",
+      "test_index": "conditional_47",
+      "execution_time_seconds": 5.0
+    },
+    {
+      "question": "2025-05-26에 KOSDAQ 시장에서 거래량이 전날대비 300% 이상 증가한 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM kosdaq WHERE date = '2025-05-26' AND volume >= 3 * LAG(volume, 1) OVER (PARTITION BY symbol ORDER BY date);\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM kosdaq WHERE date = '2025-05-26' AND volume >= 3 * LAG(volume, 1) OVER (PARTITION BY symbol ORDER BY date);"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM kosdaq WHERE date = '2025-05-26' AND volume >= 3 * LAG(volume, 1) OVER (PARTITION BY symbol ORDER BY date);"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:10:05.872911",
+      "query_type": "conditional",
+      "test_index": "conditional_48",
+      "execution_time_seconds": 5.77
+    },
+    {
+      "question": "2025-03-31에 등락률이 +3% 이상인 종목을 모두 보여줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_price_change\", \"args\": {\"date\": \"2025-03-31\", \"change_type\": \"up\", \"change_rate_min\": 3}}",
+      "parsed_tools": [
+        {
+          "name": "search_price_change",
+          "args": {
+            "date": "2025-03-31",
+            "change_type": "up",
+            "change_rate_min": 3
+          }
+        },
+        {
+          "name": "search_price_change",
+          "args": "{'date': '2025-03-31', 'change_type': 'up', 'change_rate_min': 3}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:10:15.934654",
+      "query_type": "conditional",
+      "test_index": "conditional_49",
+      "execution_time_seconds": 5.06
+    },
+    {
+      "question": "2025-01-20에 RSI가 70 이상인 과매수 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"date\": \"2025-01-20\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "date": "2025-01-20"
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'date': '2025-01-20'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:10:26.144128",
+      "query_type": "signal",
+      "test_index": "signal_1",
+      "execution_time_seconds": 5.21
+    },
+    {
+      "question": "2025-01-13에 RSI가 80 이상인 과매수 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"threshold\": 80, \"condition\": \"overbought\"}}  \n**설명**: RSI 값이 80 이상인 과매수 종목을 검색하기 위해 `get_rsi_signals` 도구를 사용합니다. 현재 도구 구조상 과거 특정 날짜(2025-01-13) 필터링 기능이 명시되지 않아 **실시간 또는 최근 데이터 기준**으로 결과가 반환될 수 있습니다. 과거 데이터 조회가 필요하다면 추가 정보가 필요합니다.  \n\n---\n\n**주의 사항**:  \n제공된 도구 설명서에는 특정 날짜를 지정해 과거 RSI 값을 조회하는 기능이 포함되어 있지 않습니다. 정확한 2025-01-13 데이터를 얻으려면 시스템 확장 또는 데이터베이스 쿼리 변경이 필요할 수 있습니다. 현 단계에서는 실시간/최근 데이터 기준으로 해석됨을 안내드립니다.",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "threshold": 80,
+            "condition": "overbought"
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'threshold': 80, 'condition': 'overbought'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:10:41.045789",
+      "query_type": "signal",
+      "test_index": "signal_2",
+      "execution_time_seconds": 9.9
+    },
+    {
+      "question": "2024-08-02에 거래량이 20일 평균 대비 500% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2024-08-02\", \"threshold\": 500}}  \n**설명**: 2024년 8월 2일을 기준으로 최근 20일간 평균 거래량 대비 500% 이상 급증한 종목을 찾기 위해 `get_volume_surge` 도구를 사용합니다. 이 도구는 지정된 날짜의 거래량을 분석하여 설정된 임계값 이상의 급증을 탐지합니다. 결과는 해당 조건을 충족하는 종목 리스트 형태로 반환됩니다.",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2024-08-02",
+            "threshold": 500
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2024-08-02', 'threshold': 500}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:10:52.706143",
+      "query_type": "signal",
+      "test_index": "signal_3",
+      "execution_time_seconds": 6.66
+    },
+    {
+      "question": "2024-09-11부터 2024-10-11까지 데드크로스가 발생한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_cross_signals\", \"args\": {\"start_date\": \"2024-09-11\", \"end_date\": \"2024-10-11\", \"signal_type\": \"데드크로스\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_cross_signals",
+          "args": {
+            "start_date": "2024-09-11",
+            "end_date": "2024-10-11",
+            "signal_type": "데드크로스"
+          }
+        },
+        {
+          "name": "get_cross_signals",
+          "args": "{'start_date': '2024-09-11', 'end_date': '2024-10-11', 'signal_type': '데드크로스'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:11:03.380405",
+      "query_type": "signal",
+      "test_index": "signal_4",
+      "execution_time_seconds": 5.67
+    },
+    {
+      "question": "2024-10-29에 거래량이 20일 평균 대비 500% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2024-10-29\", \"thresholds\": [500]}}",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2024-10-29",
+            "thresholds": [
+              500
+            ]
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2024-10-29', 'thresholds': [500]}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:11:13.457139",
+      "query_type": "signal",
+      "test_index": "signal_5",
+      "execution_time_seconds": 5.08
+    },
+    {
+      "question": "2025-03-05에 볼린저 밴드 하단에 터치한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_bollinger_signals\", \"args\": {\"date\": \"2025-03-05\", \"signal_type\": \"lower\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_bollinger_signals",
+          "args": {
+            "date": "2025-03-05",
+            "signal_type": "lower"
+          }
+        },
+        {
+          "name": "get_bollinger_signals",
+          "args": "{'date': '2025-03-05', 'signal_type': 'lower'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:11:21.967098",
+      "query_type": "signal",
+      "test_index": "signal_6",
+      "execution_time_seconds": 3.51
+    },
+    {
+      "question": "2024-10-07에 볼린저 밴드 상단에 터치한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_bollinger_signals\", \"args\": {\"date\": \"2024-10-07\", \"signal_type\": \"upper\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_bollinger_signals",
+          "args": {
+            "date": "2024-10-07",
+            "signal_type": "upper"
+          }
+        },
+        {
+          "name": "get_bollinger_signals",
+          "args": "{'date': '2024-10-07', 'signal_type': 'upper'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:11:30.557044",
+      "query_type": "signal",
+      "test_index": "signal_7",
+      "execution_time_seconds": 3.59
+    },
+    {
+      "question": "2024-12-03에 거래량이 20일 평균 대비 100% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2024-12-03\"}}  \n**설명**:  \n사용자의 요청은 2024년 12월 3일에 거래량이 20일 평균 대비 100% 이상 급증한 종목을 찾는 것입니다. 이는 `get_volume_surge` 도구의 기본 기능(20일 평균 대비 100%, 200%, 300%, 500% 이상 급증 검출)으로 해결할 수 있습니다. 날짜 매개변수에 2024-12-03을 입력해 해당 일자의 급증 종목을 조회합니다.  \n\n결과에는 해당 조건을 만족하는 종목 리스트가 반환될 것이며, 추가적인 필터링이 필요하면 다른 도구를 연동할 수 있습니다.",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2024-12-03"
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2024-12-03'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:11:43.180644",
+      "query_type": "signal",
+      "test_index": "signal_8",
+      "execution_time_seconds": 7.62
+    },
+    {
+      "question": "2024-08-08에 거래량이 20일 평균 대비 100% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2024-08-08\", \"period\": 20, \"threshold\": 100}} \n\n사용자의 요구사항은 2024년 8월 8일을 기준으로 20일 평균 거래량 대비 100% 이상 급증한 종목을 찾는 것입니다. 이를 위해 `get_volume_surge` 도구를 사용하여 해당 날짜(date), 20일 기간(period), 그리고 100% 임계값(threshold)을 설정하여 호출했습니다. 이 도구는 지정된 날짜에 해당하는 거래량 급증 종목을 필터링해 반환할 것입니다.",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2024-08-08",
+            "period": 20,
+            "threshold": 100
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2024-08-08', 'period': 20, 'threshold': 100}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:11:54.458691",
+      "query_type": "signal",
+      "test_index": "signal_9",
+      "execution_time_seconds": 6.28
+    },
+    {
+      "question": "2025-03-10에 종가가 20일 이동평균보다 10% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT 종목명 FROM 주식_데이터 WHERE 날짜='2025-03-10' AND 종가 >= (20일 이동평균 * 1.1)\"}\n\n설명:  \n사용자는 2025-03-10에 **종가가 20일 이동평균보다 10% 이상 높은 종목**을 찾고자 합니다. 이를 해결하기 위해 SQL 쿼리로 변환하여 요청합니다.  \n- `date='2025-03-10'`: 해당 날짜 필터링  \n- `종가 >= (20일 이동평균 * 1.1)`: 종가가 20일 이동평균의 110% 이상인 종목 선택  \n\n주어진 도구 중에는 이동평균과의 비율 비교 기능을 직접 지원하는 도구가 없으므로, `text2sql`을 통해 데이터베이스 질의를 구성하는 방식으로 문제를 해결합니다.",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT 종목명 FROM 주식_데이터 WHERE 날짜='2025-03-10' AND 종가 >= (20일 이동평균 * 1.1)"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT 종목명 FROM 주식_데이터 WHERE 날짜='2025-03-10' AND 종가 >= (20일 이동평균 * 1.1)"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:12:09.089962",
+      "query_type": "signal",
+      "test_index": "signal_10",
+      "execution_time_seconds": 9.63
+    },
+    {
+      "question": "2024-11-04에 RSI가 20 이하인 과매도 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"date\": \"2024-11-04\", \"rsi\": 20, \"condition\": \"oversold\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "date": "2024-11-04",
+            "rsi": 20,
+            "condition": "oversold"
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'date': '2024-11-04', 'rsi': 20, 'condition': 'oversold'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:12:18.047663",
+      "query_type": "signal",
+      "test_index": "signal_11",
+      "execution_time_seconds": 3.96
+    },
+    {
+      "question": "2024-08-12에 종가가 60일 이동평균보다 3% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2024-08-12' AND close > (AVG(close) OVER (ORDER BY date ROWS BETWEEN 59 PRECEDING AND CURRENT ROW)) * 1.03\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-08-12' AND close > (AVG(close) OVER (ORDER BY date ROWS BETWEEN 59 PRECEDING AND CURRENT ROW)) * 1.03"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-08-12' AND close > (AVG(close) OVER (ORDER BY date ROWS BETWEEN 59 PRECEDING AND CURRENT ROW)) * 1.03"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:12:31.534360",
+      "query_type": "signal",
+      "test_index": "signal_12",
+      "execution_time_seconds": 8.49
+    },
+    {
+      "question": "현대백화점에서 2024-06-01부터 2025-06-30까지 골든크로스가 몇번 발생했어?",
+      "ai_response": "TOOL_CALL: {\"name\": \"count_cross_signals\", \"args\": {\"symbol\": \"현대백화점\", \"start_date\": \"2024-06-01\", \"end_date\": \"2025-06-30\", \"type\": \"golden\"}}",
+      "parsed_tools": [
+        {
+          "name": "count_cross_signals",
+          "args": {
+            "symbol": "현대백화점",
+            "start_date": "2024-06-01",
+            "end_date": "2025-06-30",
+            "type": "golden"
+          }
+        },
+        {
+          "name": "count_cross_signals",
+          "args": "{'symbol': '현대백화점', 'start_date': '2024-06-01', 'end_date': '2025-06-30', 'type': 'golden'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:12:42.287205",
+      "query_type": "signal",
+      "test_index": "signal_13",
+      "execution_time_seconds": 5.75
+    },
+    {
+      "question": "2025-06-30에 종가가 60일 이동평균보다 10% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2025-06-30' AND close / ma_60 >= 1.1\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-06-30' AND close / ma_60 >= 1.1"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-06-30' AND close / ma_60 >= 1.1"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:12:53.399291",
+      "query_type": "signal",
+      "test_index": "signal_14",
+      "execution_time_seconds": 6.11
+    },
+    {
+      "question": "2024-12-05에 거래량이 20일 평균 대비 100% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"target_date\": \"2024-12-05\", \"comparison_period\": 20, \"surge_threshold\": 100}}",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "target_date": "2024-12-05",
+            "comparison_period": 20,
+            "surge_threshold": 100
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'target_date': '2024-12-05', 'comparison_period': 20, 'surge_threshold': 100}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:13:04.437306",
+      "query_type": "signal",
+      "test_index": "signal_15",
+      "execution_time_seconds": 6.04
+    },
+    {
+      "question": "2025-04-29에 RSI가 75 이상인 과매수 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"date\": \"2025-04-29\", \"rsi_threshold\": 75}}",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "date": "2025-04-29",
+            "rsi_threshold": 75
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'date': '2025-04-29', 'rsi_threshold': 75}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:13:12.907089",
+      "query_type": "signal",
+      "test_index": "signal_16",
+      "execution_time_seconds": 3.47
+    },
+    {
+      "question": "카스이 2024-06-01부터 2025-06-30까지 데드크로스 또는 골든크로스가 몇번 발생했어?",
+      "ai_response": "TOOL_CALL: {\"name\": \"count_cross_signals\", \"args\": {\"symbol\": \"카스이\", \"start_date\": \"2024-06-01\", \"end_date\": \"2025-06-30\", \"cross_type\": \"both\"}}",
+      "parsed_tools": [
+        {
+          "name": "count_cross_signals",
+          "args": {
+            "symbol": "카스이",
+            "start_date": "2024-06-01",
+            "end_date": "2025-06-30",
+            "cross_type": "both"
+          }
+        },
+        {
+          "name": "count_cross_signals",
+          "args": "{'symbol': '카스이', 'start_date': '2024-06-01', 'end_date': '2025-06-30', 'cross_type': 'both'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:13:22.734408",
+      "query_type": "signal",
+      "test_index": "signal_17",
+      "execution_time_seconds": 4.83
+    },
+    {
+      "question": "2025-06-02에 종가가 20일 이동평균보다 3% 이상 높은 종목을 알려줘",
+      "ai_response": "현재 제공된 도구들로는 **정확히 2025-06-02 종가가 20일 이동평균보다 3% 이상 높은 종목**을 직접 조회하기는 어렵습니다. \n\n### 이유:\n1. 단일 종목의 **종가**(`get_stock_price`)와 **20일 이동평균** 값은 별도로 조회 가능하나,\n2. 두 값을 비교하여 **3% 차이 계산** 기능은 없습니다.\n3. `text2sql`로도 복잡한 퍼센트 계산까지 자동화하기는 제한적입니다.\n\n---\n\n### 대안 제안:\n1. 먼저 관심 종목 리스트를 확보 (`search_company`, `get_market_stats`)\n2. 각 종목별 **2025-06-02 종가**와 **20일 이동평균**을 개별 조회\n3. 엑셀 또는 스프레드시트 등에서 수동으로 3% 차이 필터링\n\n또는 더 정교한 분석을 원하시면 외부 금융 API나 전문 툴 사용을 권장드립니다.",
+      "parsed_tools": [],
+      "tool_count": 0,
+      "status": "parsing_failed",
+      "timestamp": "2025-10-06T02:13:36.268409",
+      "query_type": "signal",
+      "test_index": "signal_18",
+      "execution_time_seconds": 8.53
+    },
+    {
+      "question": "2024-07-15에 RSI가 75 이상인 과매수 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"date\": \"2024-07-15\", \"rsi_upper_threshold\": 75}}",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "date": "2024-07-15",
+            "rsi_upper_threshold": 75
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'date': '2024-07-15', 'rsi_upper_threshold': 75}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:13:46.218635",
+      "query_type": "signal",
+      "test_index": "signal_19",
+      "execution_time_seconds": 4.95
+    },
+    {
+      "question": "2025-05-12에 RSI가 25 이하인 과매도 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"rsi_threshold\": 25, \"date\": \"2025-05-12\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "rsi_threshold": 25,
+            "date": "2025-05-12"
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'rsi_threshold': 25, 'date': '2025-05-12'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:13:55.594610",
+      "query_type": "signal",
+      "test_index": "signal_20",
+      "execution_time_seconds": 4.38
+    },
+    {
+      "question": "2025-02-21에 거래량이 20일 평균 대비 300% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2025-02-21\", \"threshold\": 300}}",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2025-02-21",
+            "threshold": 300
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2025-02-21', 'threshold': 300}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:14:03.649025",
+      "query_type": "signal",
+      "test_index": "signal_21",
+      "execution_time_seconds": 3.05
+    },
+    {
+      "question": "2025-03-25에 볼린저 밴드 하단에 터치한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_bollinger_signals\", \"args\": {\"date\": \"2025-03-25\", \"signal_type\": \"lower_band_touch\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_bollinger_signals",
+          "args": {
+            "date": "2025-03-25",
+            "signal_type": "lower_band_touch"
+          }
+        },
+        {
+          "name": "get_bollinger_signals",
+          "args": "{'date': '2025-03-25', 'signal_type': 'lower_band_touch'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:14:12.397366",
+      "query_type": "signal",
+      "test_index": "signal_22",
+      "execution_time_seconds": 3.75
+    },
+    {
+      "question": "2024-11-04에 거래량이 20일 평균 대비 500% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2024-11-04\", \"multiplier\": 5}}",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2024-11-04",
+            "multiplier": 5
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2024-11-04', 'multiplier': 5}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:14:21.616248",
+      "query_type": "signal",
+      "test_index": "signal_23",
+      "execution_time_seconds": 4.22
+    },
+    {
+      "question": "2024-09-24에 볼린저 밴드 하단에 터치한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_bollinger_signals\", \"args\": {\"date\": \"2024-09-24\", \"signal_type\": \"lower\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_bollinger_signals",
+          "args": {
+            "date": "2024-09-24",
+            "signal_type": "lower"
+          }
+        },
+        {
+          "name": "get_bollinger_signals",
+          "args": "{'date': '2024-09-24', 'signal_type': 'lower'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:14:30.082468",
+      "query_type": "signal",
+      "test_index": "signal_24",
+      "execution_time_seconds": 3.47
+    },
+    {
+      "question": "동구바이오제약이 2024-06-01부터 2025-06-30까지 데드크로스 또는 골든크로스가 몇번 발생했어?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_company\", \"args\": \"동구바이오제약\"}",
+      "parsed_tools": [
+        {
+          "name": "search_company",
+          "args": "동구바이오제약"
+        },
+        {
+          "name": "search_company",
+          "args": "동구바이오제약"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:14:41.593902",
+      "query_type": "signal",
+      "test_index": "signal_25",
+      "execution_time_seconds": 6.51
+    },
+    {
+      "question": "2024-09-19에 거래량이 20일 평균 대비 300% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2024-09-19\", \"period\": 20, \"threshold\": 3}}",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2024-09-19",
+            "period": 20,
+            "threshold": 3
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2024-09-19', 'period': 20, 'threshold': 3}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:14:50.506548",
+      "query_type": "signal",
+      "test_index": "signal_26",
+      "execution_time_seconds": 3.91
+    },
+    {
+      "question": "디에이치엑스컴퍼니이 2024-06-01부터 2025-06-30까지 데드크로스 또는 골든크로스가 몇번 발생했어?",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_company\", \"args\": \"디에이치엑스컴퍼니\"}",
+      "parsed_tools": [
+        {
+          "name": "search_company",
+          "args": "디에이치엑스컴퍼니"
+        },
+        {
+          "name": "search_company",
+          "args": "디에이치엑스컴퍼니"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:14:59.788408",
+      "query_type": "signal",
+      "test_index": "signal_27",
+      "execution_time_seconds": 4.28
+    },
+    {
+      "question": "2025-04-24에 볼린저 밴드 상단에 터치한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_bollinger_signals\", \"args\": {\"date\": \"2025-04-24\", \"signal_type\": \"upper\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_bollinger_signals",
+          "args": {
+            "date": "2025-04-24",
+            "signal_type": "upper"
+          }
+        },
+        {
+          "name": "get_bollinger_signals",
+          "args": "{'date': '2025-04-24', 'signal_type': 'upper'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:15:09.574003",
+      "query_type": "signal",
+      "test_index": "signal_28",
+      "execution_time_seconds": 4.79
+    },
+    {
+      "question": "2025-05-30에 거래량이 20일 평균 대비 500% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2025-05-30\", \"threshold\": 500}}",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2025-05-30",
+            "threshold": 500
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2025-05-30', 'threshold': 500}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:15:18.014368",
+      "query_type": "signal",
+      "test_index": "signal_29",
+      "execution_time_seconds": 3.44
+    },
+    {
+      "question": "2025-04-02에 종가가 20일 이동평균보다 3% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_ma_breakout\", \"args\": {\"period\": 20}}\n\n분석 과정:\n1. **목적**: 2025-04-02 기준 종가가 20일 이동평균보다 3% 이상 높은 종목 찾기\n2. **접근법**: \n   - 먼저 `get_ma_breakout` 도구로 20일 이동평균선을 돌파한 종목군 추출\n   - 이후 각 종목별 상세 데이터(종가, 20일 MA 값)를 추가로 조회해 3% 차이 검증 필요\n3. **현재 한계**: 단일 도구로 백분율 차이까지 계산 불가능 → 후속 작업이 필수적임\n\n결론: 첫 번째 단계로서 20일 이동평균 돌파 종목군을 얻기 위해 `get_ma_breakout` 실행. 추가 분석은 별도 데이터 조회와 계산이 필요함.",
+      "parsed_tools": [
+        {
+          "name": "get_ma_breakout",
+          "args": {
+            "period": 20
+          }
+        },
+        {
+          "name": "get_ma_breakout",
+          "args": "{'period': 20}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:15:32.313738",
+      "query_type": "signal",
+      "test_index": "signal_30",
+      "execution_time_seconds": 9.3
+    },
+    {
+      "question": "2025-02-25에 종가가 20일 이동평균보다 5% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2025-02-25' AND close > (20_day_ema * 1.05)\"}\n\n**설명**:  \n사용자는 2025-02-25에 종가가 20일 이동평균선의 105%(5% 초과) 이상인 종목을 찾고자 합니다. 이를 위해 `text2sql` 도구를 사용해 SQL 유사 쿼리로 조건을 명시했습니다.  \n- `date = '2025-02-25'`: 해당 날짜 필터링  \n- `close > (20_day_ema * 1.05)`: 종가가 20일 이동평균의 105% 이상 여부 확인  \n\n실제로는 백엔드에서 지원하는 정확한 컬럼명과 함수명에 맞춰 조정될 수 있으나, 핵심 로직은 위와 같습니다.",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-02-25' AND close > (20_day_ema * 1.05)"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2025-02-25' AND close > (20_day_ema * 1.05)"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:15:47.986558",
+      "query_type": "signal",
+      "test_index": "signal_31",
+      "execution_time_seconds": 10.67
+    },
+    {
+      "question": "2025-06-24에 볼린저 밴드 상단에 터치한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_bollinger_signals\", \"args\": {\"date\": \"2025-06-24\", \"upper_touch\": true}}",
+      "parsed_tools": [
+        {
+          "name": "get_bollinger_signals",
+          "args": {
+            "date": "2025-06-24",
+            "upper_touch": true
+          }
+        },
+        {
+          "name": "get_bollinger_signals",
+          "args": "{'date': '2025-06-24', 'upper_touch': True}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:15:57.912625",
+      "query_type": "signal",
+      "test_index": "signal_32",
+      "execution_time_seconds": 4.93
+    },
+    {
+      "question": "2025-02-10부터 2025-03-12까지 데드크로스가 발생한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_cross_signals\", \"args\": {\"signal_type\": \"데드크로스\"}}  \n현재 도구로는 특정 기간 내 데드크로스 발생 종목을 직접 조회할 수 없으므로, 우선 **최근 데드크로스 발생 종목 목록**을 가져옵니다. 이후 추가 분석을 통해 사용자가 요청한 기간(2025-02-10~2025-03-12) 내 발생 여부 확인이 필요할 수 있습니다.  \n\n---\n\n추가 설명:  \n1. `get_cross_signals` 도구는 **모든 종목의 데드크로스 발생 현황**을 반환합니다.  \n2. 반환된 데이터에서 개별 종목별 발생 일자를 확인한 후, 사용자가 지정한 기간(2025-02-10 ~ 2025-03-12)에 해당하는 종목만을 추출해야 합니다.  \n3. 현재 도구 체계상 자동 필터링이 어려우므로, 수작업 또는 추가 쿼리가 필요하나 본 응답 단계에서는 기본적인 데드크로스 종목군만 제공합니다.  \n\n결과 예시:  \n```json\n{\n  \"종목명\": [\"A사\", \"B사\"],\n  \"발생일자\": [\"2025-01-05\", \"2025-02-15\"]\n}\n```",
+      "parsed_tools": [
+        {
+          "name": "get_cross_signals",
+          "args": {
+            "signal_type": "데드크로스"
+          }
+        },
+        {
+          "name": "get_cross_signals",
+          "args": "{'signal_type': '데드크로스'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:16:13.177124",
+      "query_type": "signal",
+      "test_index": "signal_33",
+      "execution_time_seconds": 10.26
+    },
+    {
+      "question": "2025-01-14에 종가가 20일 이동평균보다 3% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_ma_breakout\", \"args\": {\"period\": 20}}\n\n우선 2025-01-14 당시 20일 이동평균선을 돌파한 종목들을 찾습니다. 이 도구는 기본적으로 이동평균 돌파 여부는 확인할 수 있지만, 정확한 퍼센트 차이는 제공하지 않으므로 추가 계산이 필요합니다. 먼저 돌파된 종목 리스트를 얻은 뒤 해당 종목들의 상세 데이터를 조회하여 3% 이상 초과 여부를 검증해야 합니다.",
+      "parsed_tools": [
+        {
+          "name": "get_ma_breakout",
+          "args": {
+            "period": 20
+          }
+        },
+        {
+          "name": "get_ma_breakout",
+          "args": "{'period': 20}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:16:26.630278",
+      "query_type": "signal",
+      "test_index": "signal_34",
+      "execution_time_seconds": 8.45
+    },
+    {
+      "question": "삼성전기에서 2024-06-01부터 2025-06-30까지 데드크로스가 몇번 발생했어?",
+      "ai_response": "TOOL_CALL: {\"name\": \"count_cross_signals\", \"args\": {\"symbol\": \"삼성전기\", \"start_date\": \"2024-06-01\", \"end_date\": \"2025-06-30\", \"cross_type\": \"dead\"}}",
+      "parsed_tools": [
+        {
+          "name": "count_cross_signals",
+          "args": {
+            "symbol": "삼성전기",
+            "start_date": "2024-06-01",
+            "end_date": "2025-06-30",
+            "cross_type": "dead"
+          }
+        },
+        {
+          "name": "count_cross_signals",
+          "args": "{'symbol': '삼성전기', 'start_date': '2024-06-01', 'end_date': '2025-06-30', 'cross_type': 'dead'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:16:37.381458",
+      "query_type": "signal",
+      "test_index": "signal_35",
+      "execution_time_seconds": 5.75
+    },
+    {
+      "question": "2025-04-10에 RSI가 20 이하인 과매도 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"date\": \"2025-04-10\", \"condition\": \"과매도\"}}  \n**설명**:  \n사용자의 요청은 2025-04-10에 **RSI ≤ 20**인 과매도 종목을 찾는 것입니다. 다만 현재 제공되는 도구 `get_rsi_signals`는 기본적으로 **RSI ≤ 30**을 과매도로 정의하며, RSI 값을 직접 입력해 세부 조정하는 기능은 없습니다.  \n\n따라서 다음과 같이 진행합니다:  \n1. `get_rsi_signals`로 2025-04-10의 **RSI ≤ 30**인 모든 과매도 종목을 조회합니다.  \n2. 조회된 결과에서 실제 RSI 값이 **≤ 20**인 종목을 필터링합니다.  \n\n추가 분석이 필요하나, 현재 도구로는 첫 번째 단계까지만 가능합니다. 이후 결과는 외부 로직으로 추가 검증이 필요합니다.",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "date": "2025-04-10",
+            "condition": "과매도"
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'date': '2025-04-10', 'condition': '과매도'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:16:51.915132",
+      "query_type": "signal",
+      "test_index": "signal_36",
+      "execution_time_seconds": 9.53
+    },
+    {
+      "question": "2024-10-02에 종가가 5일 이동평균보다 10% 이상 높은 종목을 알려줘",
+      "ai_response": "현재 사용 가능한 도구들로는 **5일 이동평균** 값을 직접 조회할 수 있는 기능이 없습니다. 따라서 사용자의 질문에 답변하기 위한 충분한 정보가 부족합니다. 다만, 아래와 같이 제한적인 방법으로 접근해볼 수 있습니다:\n\n---\n\n### TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_prices WHERE date = '2024-10-02';\"}  \n첫째, 2024-10-02의 모든 종목 데이터를 추출합니다. 이후 수작업으로 각 종목별 5일 이동평균을 계산하고, 종가와 비교해야 합니다.  \n\n하지만 이는 실시간 자동화 도구 사용이 아닌 수동 작업이므로, 실제 구현에는 한계가 있습니다.  \n\n--- \n\n### 결론  \n현재 도구 구성으로는 **5일 이동평균** 값을 자동으로 조회하거나 계산할 수 없어 사용자 질문에 직접 답변이 어렵습니다. 만약 단순 **종가 > 5일 이동평균 × 1.1** 대신 **종가 ≥ 특정 값** 또는 **RSI/거래량 등 다른 지표** 기반의 조건이라면 도구를 활용할 수 있을 것입니다.  \n\n추가 문의 사항이 있다면 재질문 부탁드립니다!",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_prices WHERE date = '2024-10-02';"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_prices WHERE date = '2024-10-02';"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:17:08.014622",
+      "query_type": "signal",
+      "test_index": "signal_37",
+      "execution_time_seconds": 11.1
+    },
+    {
+      "question": "2025-05-06에 RSI가 25 이하인 과매도 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"date\": \"2025-05-06\", \"condition\": \"과매도\"}}  \n**설명**: 2025년 5월 6일자 데이터에서 RSI가 25 이하인 과매도 종목을 찾기 위해 **RSI 기반 과매도 종목 검색 도구(get_rsi_signals)**를 사용합니다. 기본 과매도 조건(RSI ≤ 30)보다 더 엄격하게 RSI 25 이하로 필터링하기 위해 추가 파라미터 조정이 필요할 수 있으나, 주어진 도구 구조 상으로는 우선 위와 같이 요청합니다.  \n\n*※ 실제 시스템 구현 시에는 RSI 임계값을 직접 입력할 수 있도록 args에 rsi_threshold 값을 추가하거나 별도 옵션으로 조정 필요.*",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "date": "2025-05-06",
+            "condition": "과매도"
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'date': '2025-05-06', 'condition': '과매도'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:17:20.333674",
+      "query_type": "signal",
+      "test_index": "signal_38",
+      "execution_time_seconds": 7.32
+    },
+    {
+      "question": "2025-03-10에 종가가 5일 이동평균보다 3% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_ma_breakout\", \"args\": {\"period\": 5}}  \n그러나 사용자가 요구하는 것은 단순 이동평균 돌파 여부가 아닌 **종가가 이동평균보다 3% 이상 높은 상태**이므로, 기본 도구로는 정확히 구현되지 않을 수 있습니다.  \n\n추가 설명 필요:  \n1. 2025-03-10 시점의 5일 이동평균 값과 해당일의 종가를 각각 추출해야 함  \n2. 종가 / 이동평균 > 1.03 인 종목을 필터링해야 함  \n\n이를 위해 개별 종목 데이터 수집 → 수작업 계산이 필요하나, 현재 가용한 도구에는 이런 기능을 지원하는 도구가 없습니다.  \n\n따라서 답변 보류 또는 추가 도구 개발 필요성을 안내해야 하나, 제한된 환경 내에서 최선을 다해 답변을 작성하면 다음과 같습니다:\n\n---\n\n### 임시 대안 제안:\n모든 종목의 2025-03-10 데이터를 수집하려면 엄청난 양의 `get_stock_price` 호출이 필요합니다. 현실적으로 실행 불가능하며, 현재 시스템으로는 정답 도출이 어렵습니다.  \n\n더 구체적인 분석을 원하시면 아래 항목들을 제공해주시면 도움이 됩니다:  \n1. 관심있는 특정 섹터나 종목군이 있는지?  \n2. 최소 시가총액 등의 추가 필터링 조건이 있는지?\n\n--- \n\n현재 도구 체계로는 완전한 답변이 불가능한 상황임을 알려드립니다.",
+      "parsed_tools": [
+        {
+          "name": "get_ma_breakout",
+          "args": {
+            "period": 5
+          }
+        },
+        {
+          "name": "get_ma_breakout",
+          "args": "{'period': 5}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:17:36.669141",
+      "query_type": "signal",
+      "test_index": "signal_39",
+      "execution_time_seconds": 11.34
+    },
+    {
+      "question": "2024-08-23에 거래량이 20일 평균 대비 100% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2024-08-23' AND volume >= (AVG(volume) OVER INTERVAL '20' DAY) * 2\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-08-23' AND volume >= (AVG(volume) OVER INTERVAL '20' DAY) * 2"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-08-23' AND volume >= (AVG(volume) OVER INTERVAL '20' DAY) * 2"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:17:48.326556",
+      "query_type": "signal",
+      "test_index": "signal_40",
+      "execution_time_seconds": 6.66
+    },
+    {
+      "question": "2025-04-22에 종가가 60일 이동평균보다 5% 이상 높은 종목을 알려줘",
+      "ai_response": "현재 제공된 도구들로는 2025-04-22 기준으로 종가가 60일 이동평균보다 5% 이상 높은 종목을 직접적으로 찾기 어렵습니다. 이유는 다음과 같습니다:\n\n1. **이동평균 값 직접 조회 불가**: `get_ma_breakout`은 이동평균 돌파 여부만 확인할 뿐 실제 이동평균 값을 제공하지 않습니다.\n2. **백분율 계산 불가능**: 현재 도구들은 단순 수치 비교만 가능하며, 종가와 이동평균 간의 백분율 차이를 계산하는 기능이 없습니다.\n3. **특정 일자 데이터 추출 한계**: 단일 날짜(2025-04-22)에 대한 모든 종목의 종가와 이동평균을 한 번에 조회하는 기능이 없습니다.\n\n따라서 현재 시스템으로는 해당 질문에 직접 답변이 불가능하며, 추가적인 데이터 처리 능력 또는 커스텀 계산 기능이 필요함을 안내드립니다. 다만 일반적인 이동평균 돌파 종목은 `get_ma_breakout`으로 일부 확인할 수 있으니 참고 부탁드립니다.",
+      "parsed_tools": [],
+      "tool_count": 0,
+      "status": "parsing_failed",
+      "timestamp": "2025-10-06T02:18:03.268955",
+      "query_type": "signal",
+      "test_index": "signal_41",
+      "execution_time_seconds": 9.94
+    },
+    {
+      "question": "2025-05-07부터 2025-06-06까지 데드크로스가 발생한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_cross_signals\", \"args\": {\"start_date\": \"2025-05-07\", \"end_date\": \"2025-06-06\", \"cross_type\": \"데드크로스\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_cross_signals",
+          "args": {
+            "start_date": "2025-05-07",
+            "end_date": "2025-06-06",
+            "cross_type": "데드크로스"
+          }
+        },
+        {
+          "name": "get_cross_signals",
+          "args": "{'start_date': '2025-05-07', 'end_date': '2025-06-06', 'cross_type': '데드크로스'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:18:13.256261",
+      "query_type": "signal",
+      "test_index": "signal_42",
+      "execution_time_seconds": 4.99
+    },
+    {
+      "question": "2024-10-11부터 2024-11-10까지 골든크로스가 발생한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_cross_signals\", \"args\": {\"start_date\": \"2024-10-11\", \"end_date\": \"2024-11-10\", \"signal_type\": \"골든크로스\"}}",
+      "parsed_tools": [
+        {
+          "name": "get_cross_signals",
+          "args": {
+            "start_date": "2024-10-11",
+            "end_date": "2024-11-10",
+            "signal_type": "골든크로스"
+          }
+        },
+        {
+          "name": "get_cross_signals",
+          "args": "{'start_date': '2024-10-11', 'end_date': '2024-11-10', 'signal_type': '골든크로스'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:18:22.421592",
+      "query_type": "signal",
+      "test_index": "signal_43",
+      "execution_time_seconds": 4.17
+    },
+    {
+      "question": "2025-01-31에 RSI가 70 이상인 과매수 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_rsi_signals\", \"args\": {\"date\": \"2025-01-31\"}}  \n**설명**:  \nRSI(Relative Strength Index) 지표가 70 이상이면 과매수 상태로 간주됩니다. **get_rsi_signals** 도구는 이러한 과매수 종목을 자동으로 필터링하며, 여기서 **date** 파라미터를 통해 원하는 날짜(2025-01-31)의 데이터를 추출하도록 요청했습니다.  \n\n결과적으로 이 도구는 해당 날짜에 RSI ≥ 70인 모든 종목 리스트를 반환할 것입니다. 단, 실제 구현 시 **get_rsi_signals**의 정확한 입력 파라미터 구조와 과거 데이터 조회 가능 여부는 시스템 설계에 따라 달라질 수 있습니다.",
+      "parsed_tools": [
+        {
+          "name": "get_rsi_signals",
+          "args": {
+            "date": "2025-01-31"
+          }
+        },
+        {
+          "name": "get_rsi_signals",
+          "args": "{'date': '2025-01-31'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:18:34.818469",
+      "query_type": "signal",
+      "test_index": "signal_44",
+      "execution_time_seconds": 7.4
+    },
+    {
+      "question": "2024-11-26에 종가가 20일 이동평균보다 10% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"search_compound\", \"args\": {\"conditions\": [{\"field\": \"date\", \"operator\": \"=\", \"value\": \"2024-11-26\"}, {\"field\": \"price\", \"operator\": \">=\", \"value\": \"1.1 * moving_average_20\"}]}} \n\n**설명**:  \n사용자는 2024-11-26에 **종가가 20일 이동평균보다 10% 이상 높은 종목**을 찾고자 합니다. 이를 위해 복합 조건 검색(`search_compound`)을 사용합니다. 조건은 다음과 같습니다:  \n1. 날짜가 **2024-11-26**이어야 함 (`date = \"2024-11-26\"`).  \n2. **종가(price)**가 **20일 이동평균(moving_average_20)**의 **1.1배 이상**(10% 초과)이어야 함 (`price >= 1.1 * moving_average_20`).  \n\n다만 실제 도구 구현 시에는 `moving_average_20` 필드가 명시적으로 존재하는지 또는 별도의 계산 로직이 필요할지 확인이 필요합니다. 만약 도구 자체에서 이동평균을 계산하지 않는다면, 사전 데이터 전처리 작업이 추가로 요구될 수 있습니다.",
+      "parsed_tools": [],
+      "tool_count": 0,
+      "status": "parsing_failed",
+      "timestamp": "2025-10-06T02:18:51.418847",
+      "query_type": "signal",
+      "test_index": "signal_45",
+      "execution_time_seconds": 11.6
+    },
+    {
+      "question": "2024-09-12에 거래량이 20일 평균 대비 500% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2024-09-12\", \"period\": 20, \"threshold\": 500}}",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2024-09-12",
+            "period": 20,
+            "threshold": 500
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2024-09-12', 'period': 20, 'threshold': 500}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:19:01.209125",
+      "query_type": "signal",
+      "test_index": "signal_46",
+      "execution_time_seconds": 4.79
+    },
+    {
+      "question": "2024-09-06에 종가가 5일 이동평균보다 1% 이상 높은 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"text2sql\", \"args\": \"SELECT * FROM stock_data WHERE date = '2024-09-06' AND close > (AVG(close) OVER (ORDER BY date ROWS BETWEEN 4 PRECEDING AND CURRENT ROW)) * 1.01\"}",
+      "parsed_tools": [
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-09-06' AND close > (AVG(close) OVER (ORDER BY date ROWS BETWEEN 4 PRECEDING AND CURRENT ROW)) * 1.01"
+        },
+        {
+          "name": "text2sql",
+          "args": "SELECT * FROM stock_data WHERE date = '2024-09-06' AND close > (AVG(close) OVER (ORDER BY date ROWS BETWEEN 4 PRECEDING AND CURRENT ROW)) * 1.01"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:19:13.068431",
+      "query_type": "signal",
+      "test_index": "signal_47",
+      "execution_time_seconds": 6.86
+    },
+    {
+      "question": "2024-11-26에 거래량이 20일 평균 대비 100% 이상 급증한 종목을 알려줘",
+      "ai_response": "TOOL_CALL: {\"name\": \"get_volume_surge\", \"args\": {\"date\": \"2024-11-26\", \"period\": 20, \"threshold\": 100}}",
+      "parsed_tools": [
+        {
+          "name": "get_volume_surge",
+          "args": {
+            "date": "2024-11-26",
+            "period": 20,
+            "threshold": 100
+          }
+        },
+        {
+          "name": "get_volume_surge",
+          "args": "{'date': '2024-11-26', 'period': 20, 'threshold': 100}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:19:22.033108",
+      "query_type": "signal",
+      "test_index": "signal_48",
+      "execution_time_seconds": 3.96
+    },
+    {
+      "question": "씨유메디칼에서 2024-06-01부터 2025-06-30까지 데드크로스가 몇번 발생했어?",
+      "ai_response": "TOOL_CALL: {\"name\": \"count_cross_signals\", \"args\": {\"symbol\": \"씨유메디칼\", \"cross_type\": \"데드크로스\"}}",
+      "parsed_tools": [
+        {
+          "name": "count_cross_signals",
+          "args": {
+            "symbol": "씨유메디칼",
+            "cross_type": "데드크로스"
+          }
+        },
+        {
+          "name": "count_cross_signals",
+          "args": "{'symbol': '씨유메디칼', 'cross_type': '데드크로스'}"
+        }
+      ],
+      "tool_count": 2,
+      "status": "parsing_success",
+      "timestamp": "2025-10-06T02:19:32.241841",
+      "query_type": "signal",
+      "test_index": "signal_49",
+      "execution_time_seconds": 5.21
+    }
+  ]
+}

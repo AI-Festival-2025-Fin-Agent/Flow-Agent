@@ -1,0 +1,229 @@
+{
+  "generated_at": "2025-09-18T22:05:01.991771",
+  "total_tests": 10,
+  "tool_usage_statistics": {
+    "get_stock_price": {
+      "count": 10,
+      "success_count": 10,
+      "param_error_count": 0,
+      "error_count": 0,
+      "total_execution_time": 10.182590999999999,
+      "avg_execution_time": 1.0182590999999999
+    },
+    "get_market_stats": {
+      "count": 2,
+      "success_count": 2,
+      "param_error_count": 0,
+      "error_count": 0,
+      "total_execution_time": 2.117899,
+      "avg_execution_time": 1.0589495
+    },
+    "search_price_change": {
+      "count": 2,
+      "success_count": 2,
+      "param_error_count": 0,
+      "error_count": 0,
+      "total_execution_time": 3.503485,
+      "avg_execution_time": 1.7517425
+    },
+    "search_volume": {
+      "count": 2,
+      "success_count": 2,
+      "param_error_count": 0,
+      "error_count": 0,
+      "total_execution_time": 3.8646380000000002,
+      "avg_execution_time": 1.9323190000000001
+    },
+    "get_market_index": {
+      "count": 2,
+      "success_count": 2,
+      "param_error_count": 0,
+      "error_count": 0,
+      "total_execution_time": 1.775413,
+      "avg_execution_time": 0.8877065
+    }
+  },
+  "node_execution_statistics": {
+    "agent_node": 18,
+    "parse_node": 18,
+    "tools_node": 18,
+    "result_filter": 4
+  },
+  "validation_status_statistics": {
+    "success": 9,
+    "unknown": 1
+  },
+  "performance_summary": {
+    "most_used_tools": [
+      [
+        "get_stock_price",
+        {
+          "count": 10,
+          "success_count": 10,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 10.182590999999999,
+          "avg_execution_time": 1.0182590999999999
+        }
+      ],
+      [
+        "get_market_stats",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 2.117899,
+          "avg_execution_time": 1.0589495
+        }
+      ],
+      [
+        "search_price_change",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 3.503485,
+          "avg_execution_time": 1.7517425
+        }
+      ],
+      [
+        "search_volume",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 3.8646380000000002,
+          "avg_execution_time": 1.9323190000000001
+        }
+      ],
+      [
+        "get_market_index",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 1.775413,
+          "avg_execution_time": 0.8877065
+        }
+      ]
+    ],
+    "slowest_tools": [
+      [
+        "search_volume",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 3.8646380000000002,
+          "avg_execution_time": 1.9323190000000001
+        }
+      ],
+      [
+        "search_price_change",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 3.503485,
+          "avg_execution_time": 1.7517425
+        }
+      ],
+      [
+        "get_market_stats",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 2.117899,
+          "avg_execution_time": 1.0589495
+        }
+      ],
+      [
+        "get_stock_price",
+        {
+          "count": 10,
+          "success_count": 10,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 10.182590999999999,
+          "avg_execution_time": 1.0182590999999999
+        }
+      ],
+      [
+        "get_market_index",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 1.775413,
+          "avg_execution_time": 0.8877065
+        }
+      ]
+    ],
+    "most_error_prone_tools": [
+      [
+        "get_stock_price",
+        {
+          "count": 10,
+          "success_count": 10,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 10.182590999999999,
+          "avg_execution_time": 1.0182590999999999
+        }
+      ],
+      [
+        "get_market_stats",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 2.117899,
+          "avg_execution_time": 1.0589495
+        }
+      ],
+      [
+        "search_price_change",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 3.503485,
+          "avg_execution_time": 1.7517425
+        }
+      ],
+      [
+        "search_volume",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 3.8646380000000002,
+          "avg_execution_time": 1.9323190000000001
+        }
+      ],
+      [
+        "get_market_index",
+        {
+          "count": 2,
+          "success_count": 2,
+          "param_error_count": 0,
+          "error_count": 0,
+          "total_execution_time": 1.775413,
+          "avg_execution_time": 0.8877065
+        }
+      ]
+    ]
+  }
+}
